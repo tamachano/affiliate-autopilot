@@ -24,7 +24,7 @@ export function runAffiliate(root: string, rawTheme: string, options: { productI
   const storyboard = generateStoryboard(top);
   const compliance = complianceReport(top);
   const youtubeText = generateYouTubeText(top);
-  const tiktokText = generateTikTokText();
+  const tiktokText = generateTikTokText(top);
   const outputDir = uniqueRunDir(path.join(root, 'output'), theme);
   const createdAt = new Date().toISOString();
   const runId = path.basename(outputDir);

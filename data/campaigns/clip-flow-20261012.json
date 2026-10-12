@@ -1,6 +1,8 @@
 {
   "id": "clip-flow-20261012",
-  "theme": "学生向け・ページを開いておく便利グッズ",
-  "productIds": ["sonic-kadono-omoclip"],
+  "theme": "学生向け・ページを開いておく便利グッズ（1商品）",
+  "productIds": [
+    "sonic-kadono-omoclip"
+  ],
   "mode": "prepare"
 }

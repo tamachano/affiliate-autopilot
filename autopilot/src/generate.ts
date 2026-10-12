@@ -7,7 +7,8 @@ export function generateScript(theme: string, top: ScoredProduct[]) {
   if(top.length===1) {
     const p=top[0];
     const hook=/ページ|参考書|閉じる/.test(p.problem)?'開いておきたい本、閉じてこない？':p.problem.slice(0,24);
-    const lines=[hook,p.name.replace(/（.*?）/g,'').slice(0,28),p.benefit.slice(0,30),YOUTUBE_SHORTS_CTA];
+    const benefit=p.benefit.split(/[。！？]/)[0];
+    const lines=[hook,p.name.replace(/（.*?）/g,''),benefit,YOUTUBE_SHORTS_CTA];
     return {title:`${p.name} #Shorts`,hook,lines,primaryCTA:YOUTUBE_SHORTS_CTA,secondaryCTA:YOUTUBE_SHORTS_SECONDARY_CTA,durationSec:15};
   }
   const [a,b,c] = top;
@@ -51,10 +52,12 @@ function shortName(name: string) {
 }
 
 export function generateYouTubeText(top: ScoredProduct[]) {
+  const intro=top.length===1 ? '動画で紹介した商品はこちら。' : '勉強中にあると地味に便利なアイテムを3つまとめました。';
   const items = top.map((p,i) => `${i+1}. ${p.name}\n${p.affiliateUrl || '商品リンク：［SKU確定後に入力］'}`).join('\n\n');
-  return `勉強中にあると地味に便利なアイテムを3つまとめました。\n\n${items}\n\n※Shortsの説明欄に記載した通常URLはクリック導線として扱わず、プロフィール等のクリック可能な導線を公開前に確認してください。\n※価格・仕様は掲載時点のものです。購入前に商品ページでご確認ください。\n※この投稿にはアフィリエイトリンクを含みます。\n※Amazonのアソシエイトとして、適格販売により収入を得ています。\n\n#勉強グッズ #便利グッズ #文房具 #学生 #Shorts`;
+  return `${intro}\n\n${items}\n\n※Shortsの説明欄に記載した通常URLはクリック導線として扱わず、プロフィール等のクリック可能な導線を公開前に確認してください。\n※価格・仕様は掲載時点のものです。購入前に商品ページでご確認ください。\n※この投稿にはアフィリエイトリンクを含みます。\n※Amazonのアソシエイトとして、適格販売により収入を得ています。\n\n#勉強グッズ #便利グッズ #文房具 #学生 #Shorts`;
 }
 
-export function generateTikTokText() {
+export function generateTikTokText(top: ScoredProduct[] = []) {
+  if(top.length===1) return `広告・PR：アフィリエイト広告を含みます。\n${top[0].name}\n気になるものはプロフィールのリンクから。\n#便利グッズ #文房具`;
   return `勉強中、これ地味に便利。学生向け便利グッズ3選📚\n気になるものはプロフィールのリンクから。\n#勉強グッズ #文房具 #便利グッズ #学生`;
 }

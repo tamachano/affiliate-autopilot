@@ -28,6 +28,8 @@ test('One-product campaign runs Supervisor, exports stable hub link, and holds u
     assert.equal(result.videoDraftRendered,false);assert.match(result.productLinks[0].url,/#product-003$/);
     assert.equal(fs.readFileSync(path.join(f.repo,'data/products.json'),'utf8'),before);
     const review=JSON.parse(fs.readFileSync(path.join(outputDir,'supervisor-review.json')));
+    assert.ok(!review.finalLines.some(line=>/を助け$/.test(line)), 'Copy must not end with a truncated benefit');
+    assert.ok(!fs.readFileSync(path.join(outputDir,'tiktok.txt'),'utf8').includes('3選'), 'One-product copy must not describe three products');
     assert.equal(review.modelUsed,undefined);assert.equal(review.publishVerdict,'BLOCKED');
     assert.ok(fs.readFileSync(path.join(outputDir,'youtube.txt'),'utf8').includes('商品 No.003'));
     const m=JSON.parse(fs.readFileSync(path.join(outputDir,'asset-manifest.json')));m.entries=[];
