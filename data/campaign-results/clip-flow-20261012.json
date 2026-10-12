@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "campaignId": "clip-flow-20261012",
+  "mode": "prepare",
+  "runId": "2026-10-12-学生向け・ページを開いておく便利グッズ",
+  "experimentId": "exp-2026-10-12-学生向け・ページを開いておく便利グッズ",
+  "creativeVerdict": "GO",
+  "videoDraftRendered": false,
+  "videoUploadImplemented": false,
+  "hubReady": false,
+  "hubUpdated": false,
+  "problems": [
+    "ソニック カドノオモクリップ（SP-1667）: 映像ファイルなし",
+    "ソニック カドノオモクリップ（SP-1667）: 広告利用権の証拠が不足",
+    "完成動画・広告表記・YouTube公開先の確認記録が未完了"
+  ],
+  "productLinks": [
+    {
+      "productId": "sonic-kadono-omoclip",
+      "hubId": "003",
+      "url": "https://jinsei-no-sitsu.quality-life.workers.dev/#product-003"
+    }
+  ],
+  "hubUrl": "https://jinsei-no-sitsu.quality-life.workers.dev/",
+  "artifactName": "campaign-clip-flow-20261012",
+  "generatedAt": "2026-10-12T11:22:35.704Z"
+}
