@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ショート動画で紹介した便利グッズの一覧。" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>紹介した商品 | 人生の質を上げたい</title>
+  <link rel="icon" type="image/webp" href="./brand-icon.webp" />
+  <style>
+    :root { color-scheme: light; font-family: system-ui,-apple-system,'Noto Sans JP',sans-serif; color:#24272b; background:#f7f7f5 }
+    * { box-sizing:border-box } body { margin:0 } main { max-width:680px; padding:52px 20px 80px; margin:auto }
+    .brand { display:flex; align-items:center; gap:14px; margin-bottom:34px; text-decoration:none; color:inherit }
+    .brand-logo { width:64px; height:64px; border-radius:50%; object-fit:cover; flex:none }
+    .brand-title { display:block; font-size:18px; font-weight:750; letter-spacing:-.035em }
+    .brand-caption { display:block; color:#777; font-size:12px; margin-top:4px }
+    .brand:hover .brand-title { text-decoration:underline; text-underline-offset:3px }
+    .eyebrow { font-size:12px; letter-spacing:.14em; font-weight:750; color:#777 } h1 { font-size:clamp(25px,5vw,38px); letter-spacing:-.04em; margin:12px 0 }
+    .intro { color:#686b70; line-height:1.8; margin:0 0 24px } .notice { background:#eaeae6; border-radius:10px; padding:12px 15px; color:#555; font-size:12px; line-height:1.7 }
+    .heading { display:flex; justify-content:space-between; align-items:center; margin:34px 0 14px } h2 { font-size:17px; margin:0 }
+    .card { background:white; border:1px solid #e7e7e4; border-radius:16px; padding:21px; margin:0 0 12px; box-shadow:0 2px 9px #00000005 }
+    .meta { font-size:12px; color:#85878a; margin:0 0 9px } .name { font-size:17px; margin:0 0 8px } .desc { color:#686b70; font-size:14px; line-height:1.7; margin:0 0 16px }
+    .action { display:inline-flex; text-decoration:none; background:#222; color:white; border-radius:9px; padding:12px 16px; font-size:14px; font-weight:700; min-height:44px; align-items:center }
+    .action:hover { background:#444 } .pending { color:#777; font-size:13px } .empty { color:#777; line-height:1.7 } footer { margin-top:36px; color:#888; font-size:12px; line-height:1.7 }
+  </style>
+  <script src="./products.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body><main>
+  <a class="brand" href="https://www.youtube.com/channel/UCWhtZh-NrhihGEJPbMqrdJw" target="_blank" rel="noopener noreferrer" aria-label="人生の質を上げたい のYouTubeチャンネルへ">
+    <img class="brand-logo" src="./brand-icon.webp" alt="" width="64" height="64" />
+    <span><span class="brand-title">人生の質を上げたい</span><span class="brand-caption">YouTube Shorts で紹介した商品</span></span>
+  </a>
+  <div class="eyebrow">SHORTS ITEM LIST</div>
+  <h1>動画で紹介したモノ。</h1>
+  <p class="intro">ショート動画で気になった便利グッズを、ここから探せます。新しい動画の商品が上に並びます。</p>
+  <div class="notice">広告・PR：このページには楽天アフィリエイトおよびAmazonアソシエイトの広告が含まれます。<br>Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。</div>
+  <div class="heading"><h2>紹介した商品</h2><span id="count" class="meta"></span></div>
+  <div id="items"><p class="empty">商品を読み込んでいます…</p></div>
+  <footer>※ 商品情報や販売状況はリンク先でご確認ください。商品リンクは楽天市場またはAmazonなどの外部サイトへ移動します。</footer>
+</main></body></html>

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "003",
+    "name": "ソニック カドノオモクリップ（SP-1667）",
+    "description": "本の角に挟んで、ページを開いておくのを助ける重り付きクリップ。",
+    "url": "https://a.r10.to/hg9i7m",
+    "provider": "rakuten",
+    "publishedAt": "2026-10-12",
+    "enabled": true
+  },
+  {
+    "id": "002",
+    "name": "もぐもぐズー ハムスター型卓上クリーナー",
+    "description": "机の消しカスや小さなゴミをお掃除。",
+    "url": "https://www.amazon.co.jp/dp/B09YLP3LG9/ref=nosim?tag=tamama0a-22",
+    "publishedAt": "2026-10-10",
+    "enabled": true,
+    "provider": "amazon"
+  },
+  {
+    "id": "001",
+    "name": "ミニバッグシーラー",
+    "description": "食べかけのお菓子袋を手軽に閉じる便利グッズ。",
+    "url": "https://www.amazon.co.jp/dp/B0HKCGBX7G/ref=nosim?tag=tamama0a-22",
+    "publishedAt": "2026-10-09",
+    "enabled": true,
+    "provider": "amazon"
+  }
+]
