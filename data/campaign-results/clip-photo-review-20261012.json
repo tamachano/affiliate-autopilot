@@ -1,0 +1,21 @@
+{
+  "campaignId": "clip-photo-review-20261012",
+  "productId": "sonic-kadono-omoclip",
+  "status": "AWAITING_MATERIAL_PERMISSION",
+  "publicUpload": false,
+  "rightsVerified": false,
+  "sourcePage": "https://www.sonic-s.co.jp/product/sp-1667",
+  "sourceImage": "https://www.sonic-s.co.jp/sites/default/files/product/SP-1667_main%281000px%29.jpg",
+  "sourceWidth": 1000,
+  "sourceHeight": 1000,
+  "videoSha256": "2b472c0c04eb674425f72a1207982b0942950172d5345babcfc7e897d80c8ed5",
+  "video": {"width": 1080, "height": 1920, "durationSeconds": 15, "videoCodec": "h264", "audioCodec": "aac", "voiceCredit": "VOICEVOX:ずんだもん"},
+  "youtubeTitle": "参考書を手で押さえてない？｜カドノオモクリップ【PR】 #Shorts",
+  "youtubeDescription": "【PR】楽天アフィリエイト\n本の角に挟む重り付きクリップ、ソニック「カドノオモクリップ」SP-1667。開いたページを押さえるのを助けます。\n\n楽天の商品ページは、チャンネルのプロフィールにある商品紹介ページのNo.003から。紹介リンクを通じて購入されると、紹介者に報酬が発生する場合があります。\n\n音声：VOICEVOX:ずんだもん\n#文房具 #便利グッズ #勉強 #Shorts",
+  "permissionContact": "https://www.sonic-s.co.jp/contact.html",
+  "permissionRequest": "カドノオモクリップ SP-1667の商品画像の使用について相談です。個人で商品紹介チャンネルを運営しており、商品仕様に基づく15秒のYouTube Shortsを制作しています。楽天アフィリエイトの購入導線とPR表示を含む動画です。貴社の製品ページにあるSP-1667_main(1000px).jpgを、画像全体の縦横比を保った拡大縮小のみで掲載し、画像外に字幕と音声を加えて公開することは可能でしょうか。商品紹介サイトでの同画像の掲載可否も併せてご教示ください。貴社が許諾可能な素材でない場合は、使用可能な高解像度画像と、その利用条件・必要なクレジットをご案内いただけますと幸いです。利用料が発生する場合は申込みせず、事前に条件を伺いたく存じます。現在の動画は未公開です。許諾条件を確認してから公開いたします。",
+  "permissionRequestSent": false,
+  "youtubeAuthenticationVerified": false,
+  "hubRecheck": "HTTP 403 from this environment; prior deployment verification exists, new access check incomplete",
+  "remaining": ["User authorization for external permission inquiry and reply email", "Rights-holder response", "YouTube posting connection and final public playback verification"]
+}

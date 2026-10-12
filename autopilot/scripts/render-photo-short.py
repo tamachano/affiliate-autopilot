@@ -5,6 +5,7 @@ Runtime directory needs 0.vvm, NotoSansJP.ttf, open_jtalk_dic_utf_8-1.11,
 and voicevox_onnxruntime-linux-x64-1.23.2/lib/*.so.
 """
 import hashlib
+import argparse
 import json
 import pathlib
 import subprocess
@@ -18,7 +19,13 @@ def run(*args):
 
 
 def main():
-    image, runtime, output = map(lambda p: pathlib.Path(p).resolve(), sys.argv[1:])
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("image")
+    parser.add_argument("runtime")
+    parser.add_argument("output")
+    parser.add_argument("--source-description", default="User-provided photo; permission assessment pending")
+    args = parser.parse_args()
+    image, runtime, output = map(lambda p: pathlib.Path(p).resolve(), (args.image, args.runtime, args.output))
     if not image.is_file():
         raise ValueError("Product photo missing")
     output.mkdir(parents=True, exist_ok=True)
@@ -104,7 +111,7 @@ def main():
     assert abs(float(probe["format"]["duration"]) - 15) < 0.1
     assert any(s["codec_type"] == "audio" for s in probe["streams"])
     metadata = {"status": "PRIVATE_PREVIEW", "publicUpload": False, "rightsVerified": False,
-                "rightsSource": "User confirmed Rakuten Affiliate link-creation screen; permission assessment pending",
+                "rightsSource": args.source_description,
                 "sourcePhotoSha256": hashlib.sha256(image.read_bytes()).hexdigest(),
                 "videoSha256": hashlib.sha256(video.read_bytes()).hexdigest(),
                 "voiceCredit": "VOICEVOX:ずんだもん", "voiceStyleId": style, "voiceSpeed": speed, "scenes": timing,
