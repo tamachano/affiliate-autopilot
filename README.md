@@ -1,33 +1,53 @@
 # Affiliate AutoPilot | product hub auto-publish
 
-今ある3商品を引き継いだCloudflare Workers用の紹介サイトです。
-
-## 通常運用（あなたは商品を入力しない）
-
-一度だけ、このフォルダをGitHubのプライベートリポジトリのmainブランチに置き、CloudflareのActions Secretsを設定します。
-その後、ChatGPTへ商品のアフィリエイトリンクを送るだけ。接続されたGitHubアプリ経由でChatGPTが `data/products.json` を更新し、mainへ反映できれば、GitHub Actionsが公開まで自動実行します。
-**このZIP単体ではChatGPTとGitHubの書き込み連携はできません。** GitHubアプリの接続と、最初のリポジトリ作成・Secrets設定は必要です。
-
-### GitHub Actions Secrets（初回のみ）
-- `CLOUDFLARE_API_TOKEN` : Cloudflare Workers Scripts のデプロイ可能な権限を持つAPIトークン。必要最小権限に限定する。
-- `CLOUDFLARE_ACCOUNT_ID` : CloudflareアカウントID。
-
-SecretsはChatGPTに貼り付けないでください。GitHubの Settings → Secrets and variables → Actions に設定します。
-
-GitHub Actionsのログが成功になり、公開サイトの3商品が変わらないことを最初に確認してください。
-
-## ローカルの生成・検証
-```
-node scripts/build.cjs
-```
-
-商品情報の唯一の正本は `data/products.json`。`public/products.js` は自動生成です。
-今の3件は、もぐもぐズー・ミニバッグシーラー・カドノオモクリップです。
+既存の Cloudflare Worker `jinsei-no-sitsu` に3商品の紹介サイトを自動公開します。
 
 公開先: https://jinsei-no-sitsu.quality-life.workers.dev/
+GitHub: https://github.com/tamachano/affiliate-autopilot
 
-### 大事なこと
-- ユーザーがCloudflareへの自動公開を許可・接続しない限り、ChatGPTから勝手にデプロイすることはできません。
-- 楽天の商品画像のShortsへの使用許諾はこの仕組みでは解決しません。
-- 商品URLの正当性や紹介文はレビューしてからcommitします。
-- 商品画像を直接転載する実装は含めていません。
+## 接続と検証の状態
+
+2026-10-12、ChatGPTによる `data/products.json` の更新だけで以下を実行・確認しました。
+
+- GitHub Actionsの起動、商品データの検証・ビルド。
+- GitHub Secretsを使ったCloudflareへの公開。
+- 本番のHTML・商品データ・表示スクリプト・アイコンの4ファイルがビルド結果と一致。
+- ブラウザ上で3商品と更新した説明文を表示。
+- 購入リンクのhref、Amazonアソシエイトtag、広告リンクのrel属性を確認。
+- カドノオモクリップの楽天短縮リンクが同商品の楽天ビック販売ページに遷移。
+
+成功した実行: https://github.com/tamachano/affiliate-autopilot/actions/runs/38238476448
+検証対象コミット: `c025d3c6f37cdd0c23a9326652fdfe950e2887e9`
+
+購入リンクの設定確認と、販売先の商品・在庫・利用条件の確認は別です。Amazonの商品ページへの遷移確認はこの初回検証には含みません。
+
+## 通常運用
+
+ユーザーがチャットで商品URLを共有し、AIが仕様・利用条件・販売先・アフィリエイト導線を確認して紹介文を作成します。
+確認済みの商品情報を `data/products.json` にcommitすると、mainへのpushで公開と本番データ一致検証が自動実行されます。
+ユーザーによる商品情報の手入力、ZIPの解凍、デプロイコマンド実行は不要です。
+
+商品情報の唯一の正本は `data/products.json`。`public/products.js` はビルド生成物です。
+商品画像・動画の利用許諾や権利調査は自動公開処理では解決しません。
+Affiliate AutoPilot本体の動画制作フローとの連携は未実装です。このリポジトリには商品紹介サイトのみが含まれます。
+
+## 認証と公開先
+
+以下のRepository Actions Secretsは初回設定済みです。値はソースやチャットに記載しません。
+
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
+`wrangler.jsonc` のWorker名を変更すると別の公開先になるため、既存名を維持してください。
+公開は直列実行します。失敗時はActionsのどの段階が失敗したかを調べ、必要な修正だけを行います。
+変更前の状態はGit履歴から確認できます。
+
+## ローカル確認
+
+```sh
+node scripts/build.cjs
+node scripts/verify-live.cjs
+```
+
+`verify-live.cjs` は、本番のファイル内容とローカルのpublic内の内容が一致した場合のみ成功します。
+古いデータ・HTTPエラーは失敗となります。販売先の在庫や素材の利用許諾を判定する機能ではありません。
