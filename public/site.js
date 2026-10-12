@@ -7,7 +7,7 @@
   root.replaceChildren();
   if (!products.length) { const p=document.createElement('p'); p.className='empty'; p.textContent='現在、紹介している商品はありません。'; root.append(p); return; }
   for (const p of products) {
-    const card = document.createElement('article'); card.className='card';
+    const card = document.createElement('article'); card.className='card'; card.id=`product-${p.id}`;
     const meta = document.createElement('p'); meta.className='meta'; meta.textContent=`商品 No.${p.id}`;
     const name = document.createElement('h3'); name.className='name'; name.textContent=p.name;
     const desc = document.createElement('p'); desc.className='desc'; desc.textContent=p.description || '';

@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { prepareCampaign } from './campaign.js';
+const appRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const repoRoot=path.resolve(appRoot,'..');
+const requested=process.argv[2];
+if(!requested) throw Error('Campaign request path required');
+const requestPath=path.resolve(repoRoot,requested);
+const base=path.join(repoRoot,'data/campaigns')+path.sep;
+if(!requestPath.startsWith(base) || !requestPath.endsWith('.json')) throw Error('Request must be in data/campaigns');
+const input=JSON.parse(fs.readFileSync(requestPath,'utf8'));
+if(path.basename(requestPath,'.json')!==input.id) throw Error('Campaign filename and ID must match');
+const {result,outputDir}=await prepareCampaign(appRoot,repoRoot,input);
+fs.mkdirSync(path.join(repoRoot,'data/campaign-results'),{recursive:true});
+fs.writeFileSync(path.join(repoRoot,'data/campaign-results',result.campaignId+'.json'),JSON.stringify(result,null,2)+'\n');
+if(process.env.GITHUB_OUTPUT) fs.appendFileSync(process.env.GITHUB_OUTPUT,`hub_updated=${result.hubUpdated}\noutput_dir=${outputDir}\nartifact_name=${result.artifactName}\n`);
+console.log(JSON.stringify(result,null,2));

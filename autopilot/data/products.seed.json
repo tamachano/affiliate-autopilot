@@ -1,0 +1,251 @@
+[
+  {
+    "id": "kokuyo-book-clip",
+    "name": "コクヨ キャンパス ペンのように持ち運べるブッククリップ ブラック BC-H01D",
+    "maker": "コクヨ",
+    "sku": "BC-H01D",
+    "jan": "4901480408514",
+    "asin": "B0FLC98VQZ",
+    "category": [
+      "学生",
+      "勉強",
+      "文房具",
+      "便利グッズ"
+    ],
+    "priceYen": 594,
+    "problem": "参考書や教科書が勝手に閉じる・ページを押さえるため片手がふさがる",
+    "benefit": "本を開いた状態で保持しやすく、両手でノートを取りやすくする。折りたたむとペンのように持ち運べる",
+    "demo": "本を開く→ブッククリップを装着→両手を離す→ノートを書く→折りたたんでペンケースへ",
+    "demand": 88,
+    "visualDemo": 92,
+    "problemClarity": 92,
+    "affiliateFit": 78,
+    "priceFit": 96,
+    "claimsVerified": true,
+    "affiliateUrl": "https://www.amazon.co.jp/dp/B0FLC98VQZ?tag=tamama0a-22",
+    "affiliateUrlVerified": true,
+    "affiliateLinkType": "direct_product",
+    "assetRightsStatus": "not_allowed_without_permission",
+    "assetPlan": "own_photo_or_explicit_brand_permission",
+    "assetPermissionConfirmed": false,
+    "evidence": [
+      {
+        "type": "official_product",
+        "url": "https://www.kokuyo.com/stationery/category/clip-magnet/clip/14456/",
+        "note": "品番BC-H01D、JAN、機能、メーカー希望小売価格を確認"
+      },
+      {
+        "type": "official_terms",
+        "url": "https://www.kokuyo.com/policy/rule/",
+        "note": "公式サイト掲載画像等の転載・配布等は、著作権法で認められる範囲を超えて不可。広告動画への転載許諾は確認できない"
+      },
+      {
+        "type": "amazon_product",
+        "url": "https://www.amazon.co.jp/dp/B0FLC98VQZ",
+        "note": "コクヨ公式商品ページのAmazon導線からASINを確認"
+      }
+    ],
+    "usedBefore": false
+  },
+  {
+    "id": "kokuyo-neocritz",
+    "name": "コクヨ ネオクリッツ ペンケース ブラック×ブラック F-VBF180-1",
+    "maker": "コクヨ",
+    "sku": "F-VBF180-1",
+    "jan": "4901480323329",
+    "asin": "B01LXP9I24",
+    "category": [
+      "学生",
+      "勉強",
+      "文房具",
+      "便利グッズ"
+    ],
+    "priceYen": 1800,
+    "problem": "机の上でペンケースが場所を取り、必要なペンを探しづらい",
+    "benefit": "上部を折り返すとペンスタンドになり、机上で省スペースかつ中身を見つけやすい",
+    "demo": "普通のペンケース状態→ファスナーを開ける→上半分を折り返す→自立→ペンを取り出す",
+    "demand": 82,
+    "visualDemo": 84,
+    "problemClarity": 78,
+    "affiliateFit": 82,
+    "priceFit": 82,
+    "claimsVerified": true,
+    "affiliateUrl": "https://www.amazon.co.jp/dp/B01LXP9I24?tag=tamama0a-22",
+    "affiliateUrlVerified": true,
+    "affiliateLinkType": "direct_product",
+    "assetRightsStatus": "not_allowed_without_permission",
+    "assetPlan": "own_photo_or_explicit_brand_permission",
+    "assetPermissionConfirmed": false,
+    "evidence": [
+      {
+        "type": "official_product",
+        "url": "https://www.kokuyo.com/stationery/category/bag-pouch/pencase/13506/",
+        "note": "品番F-VBF180-1、JAN、立てて使えること、省スペース、中身が見やすい仕様を確認"
+      },
+      {
+        "type": "official_terms",
+        "url": "https://www.kokuyo.com/policy/rule/",
+        "note": "公式サイト掲載画像等の広告動画への無断転載は許諾されていない"
+      },
+      {
+        "type": "amazon_product",
+        "url": "https://www.amazon.co.jp/dp/B01LXP9I24",
+        "note": "コクヨ公式商品ページのAmazon導線からASINを確認"
+      }
+    ],
+    "usedBefore": false
+  },
+  {
+    "id": "sonic-tokisapo-100h",
+    "name": "ソニック トキ・サポ 100時間タイマー スタンド付 LV-3288-W",
+    "maker": "ソニック",
+    "sku": "LV-3288-W",
+    "jan": "4970116049643",
+    "asin": "",
+    "category": [
+      "学生",
+      "勉強",
+      "文房具",
+      "便利グッズ"
+    ],
+    "priceYen": 1870,
+    "problem": "スマホで勉強時間を測ると通知やSNSに気を取られやすい",
+    "benefit": "専用タイマーで最大約100時間まで計測でき、音をOFFにして光でタイムアップを知らせられる",
+    "demo": "スマホのタイマー→通知で気が散る演出→専用タイマーに切替→机に置いて集中→LEDで終了",
+    "demand": 84,
+    "visualDemo": 78,
+    "problemClarity": 84,
+    "affiliateFit": 84,
+    "priceFit": 80,
+    "claimsVerified": true,
+    "affiliateUrl": "https://www.amazon.co.jp/s?k=LV-3288-W&tag=tamama0a-22",
+    "affiliateUrlVerified": true,
+    "affiliateLinkType": "amazon_search_exact_sku",
+    "assetRightsStatus": "not_confirmed_for_commercial_video",
+    "assetPlan": "own_photo_or_explicit_brand_permission",
+    "assetPermissionConfirmed": false,
+    "evidence": [
+      {
+        "type": "official_product",
+        "url": "https://www.sonic-s.co.jp/product/lv-3288",
+        "note": "LV-3288-W、JAN、価格、最大99時間59分50秒、消音、LED通知、スタンド等を確認"
+      },
+      {
+        "type": "official_download_terms",
+        "url": "https://www.sonic-s.co.jp/product/tool",
+        "note": "無料ダウンロード素材は個人利用目的で、商用利用を控える旨が明記。商品画像そのものの商用動画利用許諾は確認できない"
+      },
+      {
+        "type": "amazon_search",
+        "url": "https://www.amazon.co.jp/s?k=LV-3288-W",
+        "note": "直接ASINを公開ソースから確実に特定できなかったため、正確なSKU検索へのアフィリエイトリンクを採用"
+      }
+    ],
+    "usedBefore": false
+  },
+  {
+    "id": "desk-cleaner",
+    "name": "卓上クリーナー",
+    "maker": "",
+    "sku": "",
+    "jan": "",
+    "asin": "",
+    "category": [
+      "学生",
+      "勉強",
+      "デスク",
+      "便利グッズ"
+    ],
+    "priceYen": 990,
+    "problem": "消しカスや細かなゴミが机に残る",
+    "benefit": "机上の小さなゴミをまとめやすい",
+    "demo": "消しカス→クリーナー使用→机がスッキリ",
+    "demand": 78,
+    "visualDemo": 90,
+    "problemClarity": 90,
+    "affiliateFit": 76,
+    "priceFit": 92,
+    "claimsVerified": true,
+    "affiliateUrl": "",
+    "affiliateUrlVerified": false,
+    "affiliateLinkType": "",
+    "assetRightsStatus": "not_checked",
+    "assetPlan": "",
+    "assetPermissionConfirmed": false,
+    "evidence": [],
+    "usedBefore": true
+  },
+  {
+    "id": "mini-sealer",
+    "name": "ミニバッグシーラー",
+    "maker": "",
+    "sku": "",
+    "jan": "",
+    "asin": "",
+    "category": [
+      "一人暮らし",
+      "キッチン",
+      "便利グッズ"
+    ],
+    "priceYen": 1200,
+    "problem": "開封したお菓子袋を輪ゴムやクリップで留めるのが面倒",
+    "benefit": "袋の口を閉じやすくする",
+    "demo": "開いた袋→シーラー使用→袋口が閉じる",
+    "demand": 86,
+    "visualDemo": 95,
+    "problemClarity": 90,
+    "affiliateFit": 85,
+    "priceFit": 90,
+    "claimsVerified": false,
+    "affiliateUrl": "",
+    "affiliateUrlVerified": false,
+    "affiliateLinkType": "",
+    "assetRightsStatus": "not_checked",
+    "assetPlan": "",
+    "assetPermissionConfirmed": false,
+    "evidence": [],
+    "usedBefore": true
+  },
+  {
+    "id": "sonic-kadono-omoclip",
+    "name": "ソニック カドノオモクリップ（SP-1667）",
+    "maker": "ソニック",
+    "sku": "SP-1667",
+    "jan": "4970116056146",
+    "category": [
+      "学生",
+      "勉強",
+      "文房具",
+      "便利グッズ"
+    ],
+    "priceYen": 660,
+    "problem": "参考書のページが閉じてしまい、手で押さえる必要がある",
+    "benefit": "本の角に挟む重り付きクリップ。開いたページを押さえるのを助けます。",
+    "demo": "許諾済みの実物素材で角に挟む構造を見せる。未撮影の実演は作らない。",
+    "demand": 70,
+    "visualDemo": 75,
+    "problemClarity": 90,
+    "affiliateFit": 80,
+    "priceFit": 90,
+    "claimsVerified": true,
+    "assetPermissionConfirmed": false,
+    "assetRightsStatus": "unverified",
+    "assetPlan": "商用アフィリエイト動画への実物素材利用許諾を確認する",
+    "affiliateUrl": "https://a.r10.to/hg9i7m",
+    "affiliateUrlVerified": true,
+    "affiliateLinkType": "rakuten_product",
+    "evidence": [
+      {
+        "type": "official_product",
+        "url": "https://www.sonic-s.co.jp/product/sp-1667",
+        "note": "2026-10-12にメーカー公式で角に挟む重り付き構造と希望小売価格660円を確認。販売価格は店舗で異なる。"
+      },
+      {
+        "type": "affiliate_destination",
+        "url": "https://biccamera.rakuten.co.jp/item/4970116056146/",
+        "note": "2026-10-12に短縮URLから同商品へ遷移することを確認。素材許諾は未確認。"
+      }
+    ],
+    "usedBefore": true
+  }
+]

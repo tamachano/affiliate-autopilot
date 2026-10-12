@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affiliate AutoPilot v1.0</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">A</div><div><strong>Affiliate AutoPilot</strong><span>v1.0 Integration</span></div></div>
+      <nav>
+        <button class="nav-item active" data-tab="plan">企画</button>
+        <button class="nav-item" data-tab="experiment">Experiment Manager</button>
+        <button class="nav-item" data-tab="results">結果・判定</button>
+        <button class="nav-item" data-tab="youtube">YouTube連携</button>
+        <button class="nav-item" data-tab="supervisor">Supervisor</button>
+        <button class="nav-item" data-tab="workflow">統合ワークフロー</button>
+        <button class="nav-item" data-tab="handoff">ChatGPT共有</button>
+      </nav>
+      <div class="sidebar-note"><span class="dot"></span>Local only / OAuth fixed port</div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div><p class="eyebrow">AFFILIATE PRODUCTION SYSTEM</p><h1 id="pageTitle">企画</h1></div>
+        <span id="runBadge" class="status-pill neutral">待機中</span>
+      </header>
+
+      <section id="plan" class="tab active">
+        <div class="hero-card">
+          <div><p class="eyebrow">NEW EXPERIMENT</p><h2>テーマから企画と実験を同時に作る</h2><p>商品選定だけでなく、仮説・変更変数・成功条件・ChatGPTレビュー用プロンプトまで1セットで保存します。</p></div>
+          <div class="theme-row"><input id="themeInput" value="学生向け便利グッズ" /><button id="runButton" class="primary">企画を作成</button></div>
+          <div class="chips"><button data-theme="学生向け便利グッズ">学生向け</button><button data-theme="一人暮らし便利グッズ">一人暮らし</button><button data-theme="デスク便利グッズ">デスク</button></div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat"><span>Experiment</span><strong id="statExp">—</strong><small>current</small></div>
+          <div class="stat"><span>Products</span><strong id="statProducts">—</strong><small>selected</small></div>
+          <div class="stat"><span>Variables</span><strong id="statVariables">—</strong><small>max 2</small></div>
+          <div class="stat"><span>Publish gate</span><strong id="statGate">—</strong><small>compliance</small></div>
+        </div>
+
+        <div class="section-head"><h2>選定商品</h2><span class="muted">需要 × 動画映え × 価格 × 課題 × affiliate fit</span></div>
+        <div id="productGrid" class="product-grid"><div class="empty-state wide">まだ企画がありません。</div></div>
+
+        <div class="two-col gap-top">
+          <div class="panel"><div class="panel-head"><div><p class="eyebrow">SCRIPT</p><h2 id="scriptTitle">15秒台本</h2></div></div><div id="scriptLines" class="empty-state">企画後に表示</div></div>
+          <div class="panel"><div class="panel-head"><div><p class="eyebrow">COMPLIANCE</p><h2>公開ゲート</h2></div></div><div id="complianceList" class="empty-state">企画後に表示</div></div>
+        </div>
+      </section>
+
+      <section id="experiment" class="tab">
+        <div class="section-head"><div><p class="eyebrow">PDCA CORE</p><h2>Experiment Manager</h2></div><button id="refreshExperiments" class="ghost">一覧更新</button></div>
+        <div class="experiment-layout">
+          <div class="panel">
+            <div class="panel-head"><div><p class="eyebrow">CURRENT</p><h2 id="expId">実験を選択してください</h2></div><span id="expStatus" class="status-pill neutral">—</span></div><div id="experimentModeNote" class="youtube-sync-box"><div><strong>実験モード</strong><p>実験を選ぶと自動判定します。</p></div><span id="experimentModeBadge" class="status-pill neutral">—</span></div>
+            <label>仮説<textarea id="hypothesis" rows="3"></textarea></label>
+            <label>変更変数（最大2つ）<input id="variables" placeholder="target=student, hook=共感型" /></label>
+            <div class="form-grid">
+              <label>主要指標<input id="primaryMetric" /></label>
+              <label>副次指標<input id="secondaryMetrics" placeholder="stayed_to_watch_pct, conversions" /></label>
+              <label>ベースライン<input id="baselineValue" type="number" step="0.001" placeholder="例: 0.008" /></label>
+              <label>目標値<input id="targetValue" type="number" step="0.001" placeholder="例: 0.012" /></label>
+            </div>
+            <label>成功条件<textarea id="successCriteria" rows="2"></textarea></label>
+            <div class="youtube-link-mini"><span>Linked YouTube</span><strong id="linkedVideoId">未紐付け</strong></div>
+            <div class="actions"><button id="savePlanning" class="primary dark">実験設計を保存</button><button id="markReady" class="ghost">企画レビュー済みにする</button></div>
+            <p class="hint">1変数＋ベースラインあり＝統制実験。2変数またはベースラインなし＝探索実験です。探索中は主要指標を視聴指標に寄せ、相対20%改善では判定しません。</p>
+          </div>
+          <div class="panel"><div class="panel-head"><div><p class="eyebrow">HISTORY</p><h2>実験履歴</h2></div></div><div id="experimentList" class="empty-state">まだ実験がありません。</div></div>
+        </div>
+      </section>
+
+      <section id="results" class="tab">
+        <div class="two-col">
+          <div class="panel">
+            <div class="panel-head"><div><p class="eyebrow">ANALYTICS</p><h2>最小入力で判定</h2></div><span class="status-pill good">かんたん入力</span></div>
+            <p class="hint">YouTube連携後はYouTube指標を自動取得。Affiliate clicks / Conversions はクリック可能な外部導線がある場合だけ入力します。</p>
+
+            <div class="stage-switch" role="group" aria-label="stage">
+              <button class="stage-btn active" data-stage-value="24h">24h</button>
+              <button class="stage-btn" data-stage-value="72h">72h</button>
+              <button class="stage-btn" data-stage-value="manual">その他</button>
+            </div>
+            <input id="stage" type="hidden" value="24h" />
+            <input id="platform" type="hidden" value="youtube" />
+
+            <div class="quick-results-grid">
+              <label>Views<input id="views" type="number" inputmode="numeric" placeholder="例 216" /></label>
+              <label>Affiliate clicks<input id="clicks" type="number" inputmode="numeric" placeholder="分からなければ空欄" /></label>
+              <label>Conversions<input id="conversions" type="number" inputmode="numeric" placeholder="成果件数" /></label>
+            </div>
+
+            <details class="optional-details">
+              <summary>細かい指標も入れる（任意）</summary>
+              <div class="form-grid results-form gap-top-small">
+                <label>Stayed to watch %<input id="stayed" type="number" step="0.1" /></label>
+                <label>Average view duration sec<input id="avd" type="number" step="0.1" /></label>
+                <label>Likes<input id="likes" type="number" /></label>
+                <label>Subscribers Δ<input id="subs" type="number" /></label>
+                <label>Revenue ¥<input id="revenue" type="number" /></label>
+              </div>
+            </details>
+
+            <details class="optional-details">
+              <summary>YouTube Studioのテキストを貼って自動入力</summary>
+              <p class="hint">Studioからコピーした文字列をそのまま貼って「読み取る」。見つかった項目だけ埋めます。</p>
+              <textarea id="analyticsPaste" rows="7" placeholder="例：
+視聴回数 216
+視聴を継続 9.3%
+平均視聴時間 0:09"></textarea>
+              <div class="actions"><button id="parseAnalytics" class="ghost">テキストから読み取る</button></div>
+            </details>
+
+            <div class="youtube-sync-box"><div><strong>YouTube Analytics API</strong><p>動画を紐付け済みなら、Views・Engaged Views・平均視聴時間・Likes・登録者増減を自動取得します。</p></div><button id="syncYouTube" class="ghost">YouTubeから取得</button></div>
+            <div class="actions"><button id="saveAndJudge" class="primary dark">保存して判定</button><button id="saveAnalytics" class="ghost">保存だけ</button></div>
+          </div>
+          <div class="panel"><div class="panel-head"><div><p class="eyebrow">JUDGEMENT</p><h2>判定</h2></div></div><div id="judgementBox" class="empty-state">数字を入れて「保存して判定」を押すだけ。</div><div id="analyticsHistory" class="history"></div></div>
+        </div>
+      </section>
+
+
+      <section id="youtube" class="tab">
+        <div class="two-col">
+          <div class="panel">
+            <div class="panel-head"><div><p class="eyebrow">YOUTUBE OAUTH</p><h2>チャンネル接続</h2></div><span id="youtubeStatusBadge" class="status-pill neutral">確認中</span></div>
+            <div id="youtubeStatus" class="youtube-status empty-state">接続状態を確認しています。</div>
+            <div class="actions"><a id="youtubeConnect" class="primary dark button-link" href="/auth/google/start">YouTubeを接続</a><button id="youtubeDisconnect" class="ghost">接続解除</button><button id="refreshYouTube" class="ghost">再確認</button></div>
+            <p class="hint">OAuthのClient Secretやトークンはブラウザには返しません。トークンはローカルSQLiteに保存します。</p>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><div><p class="eyebrow">LINK VIDEO</p><h2>最近の動画</h2></div><button id="loadYouTubeVideos" class="ghost">動画を取得</button></div>
+            <p class="hint">Experimentを選択してから「この実験に紐付け」を押します。以後は結果画面の「YouTubeから取得」で自動同期できます。</p>
+            <div id="youtubeVideoList" class="empty-state">YouTube接続後に動画一覧を取得できます。</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="supervisor" class="tab">
+        <div class="section-head"><div><p class="eyebrow">AUTO REVIEW LOOP</p><h2>Supervisor Loop + Humanizer</h2></div><span id="supervisorMode" class="status-pill neutral">未実行</span></div>
+        <div class="two-col">
+          <div class="panel">
+            <div class="panel-head"><div><p class="eyebrow">REVIEW → FIX → REVIEW</p><h2>自動企画レビュー</h2></div></div>
+            <p class="hint">Marketing / Video / Humanizer / Compliance / Experiment を同時に確認します。最大3回。権利や法務のSTOPは自動修正で解除しません。</p>
+            <div class="supervisor-guardrails">
+              <div>✓ AIっぽい説明文・テンプレ広告語を減点</div>
+              <div>✓ 商品事実は創作しない</div>
+              <div>✓ 実験変数を勝手に増やさない</div>
+              <div>✓ 法務・素材権利は固定ガード</div>
+            </div>
+            <div class="actions"><button id="runSupervisor" class="primary dark">Supervisorを実行</button><button id="loadSupervisor" class="ghost">履歴を更新</button></div>
+            <p class="hint">OPENAI_API_KEY が .env にあればAIレビューも併用。未設定でもローカルのHumanizer/Guardは動きます。</p>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><div><p class="eyebrow">FINAL DRAFT</p><h2>最終台本</h2></div><span id="humanScoreBadge" class="status-pill neutral">Human —</span></div>
+            <div id="supervisorFinal" class="empty-state">実験を選んでSupervisorを実行してください。</div>
+          </div>
+        </div>
+        <div class="panel gap-top">
+          <div class="panel-head"><div><p class="eyebrow">ITERATIONS</p><h2>レビュー履歴</h2></div></div>
+          <div id="supervisorHistory" class="empty-state">まだSupervisor履歴はありません。</div>
+        </div>
+      </section>
+
+      <section id="workflow" class="tab">
+        <div class="section-head"><div><p class="eyebrow">V1.0 INTEGRATION</p><h2>商品から改善までの全工程</h2></div><button id="refreshWorkflow" class="ghost">状態を更新</button></div>
+        <div class="two-col">
+          <div class="panel"><div class="panel-head"><div><p class="eyebrow">CAPABILITY MAP</p><h2>自動化の接続状況</h2></div></div><div id="capabilityBox" class="empty-state">読み込み中</div></div>
+          <div class="panel"><div class="panel-head"><div><p class="eyebrow">RIGHTS GATE</p><h2>素材・制作ゲート</h2></div></div><div id="workflowState" class="empty-state">実験を選ぶと素材と公開の状態を確認します。</div><div class="actions"><button id="createVideoDraft" class="primary dark">許諾済み素材から動画ドラフト作成</button></div><p class="hint">現在はffmpegで実写3カットを15秒の無音縦型に編集する機能です。権利証拠・映像が欠ければ作成しません。日本語TTS/字幕/投稿は未接続。</p></div>
+        </div>
+        <div class="two-col gap-top">
+          <div class="panel"><div class="panel-head"><div><p class="eyebrow">REVIEW → HOOK</p><h2>レビュー傾向を自然な訴求に</h2></div></div><p class="hint">レビューを自動収集しません。許可を得たレビュー傾向メモなど、自分で確認した内容を1行ずつ入力。原文転載は避けてください。</p><textarea id="reviewNotes" rows="8" placeholder="例：参考書が閉じてしまうのが困る
+机の上が狭い
+スマホで時間を確認すると集中が途切れる"></textarea><div class="actions"><button id="analyzeReviewNotes" class="primary dark">意味抽出→フック生成</button></div><div id="reviewInsightsOutput" class="empty-state">入力待ち</div></div>
+          <div class="panel"><div class="panel-head"><div><p class="eyebrow">EXPERIMENT LOOP</p><h2>次の仮説候補</h2></div></div><div id="pdcaNext" class="empty-state">実験を選択してください。</div><p class="hint">数字が少ない時は勝敗を決めず、変更変数を1つに絞る方針です。</p></div>
+        </div>
+      </section>
+
+      <section id="handoff" class="tab">
+        <div class="panel text-panel">
+          <div class="panel-head"><div><p class="eyebrow">CHATGPT HANDOFF</p><h2>企画レビュー用プロンプト</h2></div><div class="actions compact"><button id="refreshPrompt" class="ghost">再生成</button><button id="copyPrompt" class="copy">コピー</button></div></div>
+          <p class="hint">Experiment Managerの最新状態を使って生成します。これをこのChatGPTに貼れば、口頭説明なしで企画レビューを続けられます。</p>
+          <pre id="handoffPrompt">実験を作成すると、ここに共有用プロンプトが出ます。</pre>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

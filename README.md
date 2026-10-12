@@ -29,7 +29,9 @@ GitHub: https://github.com/tamachano/affiliate-autopilot
 
 商品情報の唯一の正本は `data/products.json`。`public/products.js` はビルド生成物です。
 商品画像・動画の利用許諾や権利調査は自動公開処理では解決しません。
-Affiliate AutoPilot本体の動画制作フローとの連携は未実装です。このリポジトリには商品紹介サイトのみが含まれます。
+Affiliate AutoPilot v1.3を引き継いだ本体は `autopilot/` で管理します。1商品・3商品の企画、Supervisor、素材ゲート、完成動画からの商品ページへの連携を追加しました。制作依頼は `data/campaigns/`、実行結果は `data/campaign-results/` に記録します。詳細は [autopilot/INTEGRATION.md](autopilot/INTEGRATION.md) を参照してください。
+
+日本語TTS・字幕の焼き込み・YouTube自動投稿・成約情報の自動収集は未実装です。無音ドラフトは完成広告として扱いません。
 
 ## 認証と公開先
 

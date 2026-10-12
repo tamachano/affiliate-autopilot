@@ -1,0 +1,26 @@
+{
+  "name": "affiliate-autopilot",
+  "version": "1.4.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "affiliate": "npm run build --silent && node --no-warnings dist/cli.js",
+    "demo": "npm run affiliate -- \"学生向け便利グッズ\"",
+    "dev": "npm run build --silent && node --no-warnings dist/server.js",
+    "ui": "npm run dev",
+    "hub:build": "node ../scripts/build.cjs",
+    "hub:check": "node ../scripts/build.cjs && node ../scripts/verify-live.cjs",
+    "review:brief": "node scripts/review-brief.mjs",
+    "links:check": "node scripts/links-check.mjs",
+    "campaign": "npm run build --silent && node --no-warnings dist/campaign-cli.js",
+    "test": "npm run build --silent && node --no-warnings --test tests/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0"
+  }
+}

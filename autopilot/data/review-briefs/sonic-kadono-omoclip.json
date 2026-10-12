@@ -1,0 +1,94 @@
+{
+  "id": "sonic-kadono-omoclip-sp1667",
+  "product_name": "ソニック カドノオモクリップ 2個入 SP-1667",
+  "product_sku": "SP-1667",
+  "official_price_yen": 660,
+  "official_price_note": "メーカー公式直販の確認時点の税込価格。Amazon価格ではない。",
+  "asin": null,
+  "amazon_affiliate_url": null,
+  "affiliate_link_verified": false,
+  "research_method": "公開されている少数のレビューを人が確認し要点をまとめた。網羅的なレビュー集計ではない。",
+  "customer_insights": [
+    {
+      "insight": "勉強や資格試験の問題集を開いておくのに便利との声がある",
+      "support": [
+        "https://item.rakuten.co.jp/nanshindo/sonic-sp-1667/"
+      ],
+      "confidence": "limited"
+    },
+    {
+      "insight": "小さく収納しやすく、机上でも邪魔になりにくいとの声がある",
+      "support": [
+        "https://item.rakuten.co.jp/nanshindo/sonic-sp-1667/",
+        "https://review.rakuten.co.jp/item/1/213128_10009511/1.1/"
+      ],
+      "confidence": "limited"
+    },
+    {
+      "insight": "分厚い本ではクリップの重さだけで開いた状態を維持できない場合がある",
+      "support": [
+        "https://item.rakuten.co.jp/bunbougu-shibuya/sp-1667/"
+      ],
+      "confidence": "limited"
+    }
+  ],
+  "official_facts": [
+    {
+      "fact": "2個入りで、本の角を挟み、おもさでページキープする構造",
+      "source": "https://www.sonic-s.co.jp/product/sp-1667"
+    },
+    {
+      "fact": "最大開口約5mm、2個を重ねておもさを増やすこともできる",
+      "source": "https://www.sonip.net/product/1294"
+    }
+  ],
+  "video": {
+    "title": "参考書が勝手に閉じる、あの地味なストレスに。",
+    "hook": "参考書って、手を離した瞬間に閉じない？",
+    "narration": "参考書って、開いておきたいページほど閉じない？ そんなときに、これ。本の角に付ける重り付きクリップ！ 手で押さえなくていいの、地味にありがたい。気になったらプロフィールから！",
+    "duration_seconds": 15,
+    "scenes": [
+      {
+        "start": 0,
+        "end": 3,
+        "caption": "参考書、開いておきたいのに閉じない？",
+        "visual": "自作の図解。参考書が閉じる様子。"
+      },
+      {
+        "start": 3,
+        "end": 9,
+        "caption": "本の角に付ける重り付きクリップ",
+        "visual": "商品実物を使った素材が確保できなければ、抽象図解。実物撮影のように誤認させない。"
+      },
+      {
+        "start": 9,
+        "end": 12,
+        "caption": "手で押さえる小さなストレスに",
+        "visual": "文字とオリジナル線画。"
+      },
+      {
+        "start": 12,
+        "end": 15,
+        "caption": "商品はプロフィールから",
+        "visual": "プロフィール誘導。下部に仕様確認の注記（スマホで読める大きさ）。"
+      }
+    ],
+    "description": "参考書が勝手に閉じる、あの小さなストレスに。ソニックのカドノオモクリップ（SP-1667）を紹介。\n※レビューの傾向を参考にした商品紹介で、実使用レビューではありません。\n※アフィリエイト広告を利用しています。\n商品はプロフィールの「紹介済み商品ページ」から。",
+    "on_screen_disclaimer": "※商品の詳細・対応条件は販売ページをご確認ください。"
+  },
+  "compliance": {
+    "status": "HOLD",
+    "reasons": [
+      "商品のAmazon.co.jp商品ページまたはASINを未特定。商品名だけから商品リンクを推測しない。",
+      "商品写真や動画の商用利用許諾は未確認。使う場合は許諾または自作撮影が必要",
+      "図解のみで訴求力が成立するか、実際の15秒動画で要確認",
+      "外部公開時はサイトに商品リンクが準備できてから掲載"
+    ],
+    "safe_actions": [
+      "レビューの意味を抽出した独自台本を制作",
+      "独自の文字・抽象図解を制作",
+      "購入経験を装わない"
+    ],
+    "policy": "メリット中心の短い動画。詳細仕様の注記はナレーションに必須ではない。ただし安全性・購入判断に大きく関わる制約や誤認を生む表現は、小さな注記だけで処理しない。"
+  }
+}

@@ -1,0 +1,83 @@
+name: Prepare Affiliate Campaign
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/campaigns/*.json'
+  workflow_dispatch:
+    inputs:
+      campaign:
+        description: Campaign ID
+        required: true
+        type: string
+permissions:
+  contents: write
+concurrency:
+  group: product-hub-production
+  cancel-in-progress: false
+jobs:
+  campaign:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Select changed campaign
+        id: select
+        env:
+          REQUESTED_CAMPAIGN: ${{ inputs.campaign }}
+        run: |
+          if [ -n "$REQUESTED_CAMPAIGN" ]; then
+            if [[ ! "$REQUESTED_CAMPAIGN" =~ ^[a-z0-9][a-z0-9-]{0,79}$ ]]; then exit 1; fi
+            request="data/campaigns/$REQUESTED_CAMPAIGN.json"
+          else
+            mapfile -t requests < <(git diff-tree --no-commit-id --name-only -r HEAD | sed -n '/^data\/campaigns\/[a-z0-9-]*\.json$/p')
+            if [ "${#requests[@]}" -ne 1 ]; then
+              echo "::error::Commit exactly one campaign request per run."
+              exit 1
+            fi
+            request="${requests[0]}"
+          fi
+          test -f "$request"
+          echo "request=$request" >> "$GITHUB_OUTPUT"
+      - name: Ensure video tools are available
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y ffmpeg
+          fi
+      - name: Install build tools and run integration tests
+        working-directory: autopilot
+        run: npm ci --ignore-scripts --no-audit --no-fund && npm test
+      - name: Prepare campaign using local reviews
+        id: prepare
+        env:
+          OPENAI_API_KEY: ''
+          CAMPAIGN_REQUEST: ${{ steps.select.outputs.request }}
+        working-directory: autopilot
+        run: node --no-warnings dist/campaign-cli.js "$CAMPAIGN_REQUEST"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.prepare.outputs.artifact_name }}
+          path: ${{ steps.prepare.outputs.output_dir }}
+          retention-days: 7
+      - name: Record campaign result
+        run: |
+          git config user.name 'affiliate-autopilot'
+          git config user.email 'affiliate-autopilot@users.noreply.github.com'
+          git add data/campaign-results data/products.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record affiliate campaign result'
+            git push origin HEAD:main
+          fi
+      # GITHUB_TOKEN commits do not trigger another push workflow. Publish here.
+      - name: Publish ready product page
+        if: steps.prepare.outputs.hub_updated == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node scripts/build.cjs && npx --yes wrangler@4 deploy && node scripts/verify-live.cjs

@@ -27,7 +27,7 @@ for (const r of rows) {
   if (provider === 'amazon' && host !== 'amazon.co.jp' && !host.endsWith('.amazon.co.jp')) throw Error('Unexpected Amazon domain: '+host);
   if (provider === 'amazon' && !amazonTags.has(u.searchParams.get('tag'))) throw Error('Amazon associate tag missing/unexpected for product '+id);
   if (publishedAt && !/^\d{4}-\d{2}-\d{2}$/.test(publishedAt)) throw Error('Invalid publish date: '+id);
-  output.push({id, name, description, provider, url, publishedAt, enabled: r.enabled !== false});
+  output.push({id,name,description,provider,url,publishedAt,enabled:r.enabled!==false,...(typeof r.productId==='string'?{productId:r.productId}:{}),...(typeof r.experimentId==='string'?{experimentId:r.experimentId}:{}),...(/^[A-Za-z0-9_-]{11}$/.test(r.youtubeVideoId||'')?{youtubeVideoId:r.youtubeVideoId}:{})});
 }
 const content = `window.PRODUCTS = ${JSON.stringify(output,null,2).replaceAll('<','\\u003c').replaceAll('>','\\u003e').replaceAll('&','\\u0026')};\n`;
 fs.writeFileSync(path.join(root,'public','products.js'),content,'utf8');
