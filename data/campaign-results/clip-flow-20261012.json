@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "campaignId": "clip-flow-20261012",
   "mode": "prepare",
-  "runId": "2026-10-12-学生向け・ページを開いておく便利グッズ",
-  "experimentId": "exp-2026-10-12-学生向け・ページを開いておく便利グッズ",
+  "runId": "2026-10-12-学生向け・ページを開いておく便利グッズ（1商品）",
+  "experimentId": "exp-2026-10-12-学生向け・ページを開いておく便利グッズ（1商品）",
   "creativeVerdict": "GO",
   "videoDraftRendered": false,
   "videoUploadImplemented": false,
@@ -23,5 +23,5 @@
   ],
   "hubUrl": "https://jinsei-no-sitsu.quality-life.workers.dev/",
   "artifactName": "campaign-clip-flow-20261012",
-  "generatedAt": "2026-10-12T11:22:35.704Z"
+  "generatedAt": "2026-10-12T11:28:07.812Z"
 }
