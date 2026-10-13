@@ -11,8 +11,12 @@ def get(path):
   with urllib.request.urlopen(req,timeout=45) as r:return json.load(r)
  except urllib.error.HTTPError as e:raise RuntimeError('SUZURI HTTP '+str(e.code)) from None
 report=[]
+listed=get('products?userName=tamachano_pod&limit=50').get('products',[])
+print('Owner product list count: '+str(len(listed)))
 for pid,(mid,price) in expected.items():
- p=get('products/'+str(pid))['product']
+ matches=[p for p in listed if p.get('id')==pid]
+ if len(matches)!=1:raise RuntimeError('Private product not exposed by read API: '+str(pid))
+ p=matches[0]
  m=p['material']
  if p['id']!=pid or m['id']!=mid or m['user']['name']!='tamachano_pod':raise RuntimeError('Ownership mismatch')
  if m.get('violation'):raise RuntimeError('Platform violation flag')
