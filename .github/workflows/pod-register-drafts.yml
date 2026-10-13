@@ -1,0 +1,22 @@
+name: Register SUZURI Private Drafts
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pod-suzuri-drafts
+  cancel-in-progress: false
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify SUZURI connection
+        env:
+          SUZURI_API_TOKEN: ${{ secrets.SUZURI_API_TOKEN }}
+        run: python3 pod/check-suzuri.py
+      - name: Create three approved private drafts
+        env:
+          SUZURI_API_TOKEN: ${{ secrets.SUZURI_API_TOKEN }}
+        run: python3 pod/register-drafts.py
