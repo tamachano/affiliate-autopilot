@@ -1,9 +1,6 @@
 name: Publish Approved SUZURI Products
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/pod-publish-approved.yml']
 permissions:
   contents: read
 concurrency:
