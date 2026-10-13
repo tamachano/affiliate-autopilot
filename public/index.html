@@ -22,6 +22,21 @@
     .meta { font-size:12px; color:#85878a; margin:0 0 9px } .name { font-size:17px; margin:0 0 8px } .desc { color:#686b70; font-size:14px; line-height:1.7; margin:0 0 16px }
     .action { display:inline-flex; text-decoration:none; background:#222; color:white; border-radius:9px; padding:12px 16px; font-size:14px; font-weight:700; min-height:44px; align-items:center }
     .action:hover { background:#444 } .pending { color:#777; font-size:13px } .empty { color:#777; line-height:1.7 } footer { margin-top:36px; color:#888; font-size:12px; line-height:1.7 }
+    main { max-width:760px } .card { padding:22px; margin-bottom:18px }
+    .card-content { display:grid; grid-template-columns:168px minmax(0,1fr); gap:22px; align-items:start }
+    .thumbnail { display:block; position:relative; aspect-ratio:9/16; border-radius:12px; overflow:hidden; background:#efefed; color:white; text-decoration:none }
+    .thumbnail img { width:100%; height:100%; object-fit:cover; display:block }
+    .thumbnail::after { content:'▶'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:42px; height:42px; display:grid; place-items:center; padding-left:3px; border-radius:50%; background:#151515b3; font-size:18px; box-shadow:0 2px 12px #0003 }
+    .thumbnail:hover::after { background:#d62626 } .thumbnail:focus-visible,.video-title a:focus-visible,.action:focus-visible,.watch-link:focus-visible { outline:3px solid #3068c2; outline-offset:4px }
+    .video-title { font-size:19px; line-height:1.55; letter-spacing:-.025em; margin:0 0 16px; overflow-wrap:anywhere }
+    .video-title a { color:inherit; text-decoration:none } .video-title a:hover { text-decoration:underline; text-underline-offset:3px }
+    .product-name { font-size:14px; line-height:1.6; font-weight:700; margin:0 0 8px } .desc { font-size:13px }
+    .actions { display:flex; align-items:center; flex-wrap:wrap; gap:12px; margin-top:16px }
+    .watch-link { color:#555; font-size:13px; padding:9px 0; min-height:44px; display:inline-flex; align-items:center; text-underline-offset:3px }
+    .other-videos { border-top:1px solid #ecece8; padding-top:12px; margin-top:18px; font-size:12px; line-height:1.7 }
+    .other-videos p { color:#777; margin:0 0 5px } .other-videos a { display:block; color:#555; text-underline-offset:3px; padding:4px 0 }
+    @media (max-width:520px) { main { padding:32px 16px 64px } .card { padding:16px } .card-content { grid-template-columns:112px minmax(0,1fr); gap:14px } .video-title { font-size:16px; margin-bottom:12px } .action { padding:11px 12px; font-size:12px } .actions { gap:4px 12px } }
+    @media (max-width:350px) { .card-content { grid-template-columns:90px minmax(0,1fr); gap:12px } .video-title { font-size:15px } }
   </style>
   <script src="./products.js" defer></script>
   <script src="./site.js" defer></script>
@@ -33,9 +48,10 @@
   </a>
   <div class="eyebrow">SHORTS ITEM LIST</div>
   <h1>動画で紹介したモノ。</h1>
-  <p class="intro">ショート動画で気になった便利グッズを、ここから探せます。新しい動画の商品が上に並びます。</p>
+  <p class="intro">見た動画のサムネイルから、気になった商品を探せます。動画の確認も、商品ページへの移動もここから。</p>
   <div class="notice">広告・PR：このページには楽天アフィリエイトおよびAmazonアソシエイトの広告が含まれます。<br>Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。</div>
   <div class="heading"><h2>紹介した商品</h2><span id="count" class="meta"></span></div>
   <div id="items"><p class="empty">商品を読み込んでいます…</p></div>
   <footer>※ 商品情報や販売状況はリンク先でご確認ください。商品リンクは楽天市場またはAmazonなどの外部サイトへ移動します。</footer>
 </main></body></html>
+

@@ -27,8 +27,22 @@ for (const r of rows) {
   if (provider === 'amazon' && host !== 'amazon.co.jp' && !host.endsWith('.amazon.co.jp')) throw Error('Unexpected Amazon domain: '+host);
   if (provider === 'amazon' && !amazonTags.has(u.searchParams.get('tag'))) throw Error('Amazon associate tag missing/unexpected for product '+id);
   if (publishedAt && !/^\d{4}-\d{2}-\d{2}$/.test(publishedAt)) throw Error('Invalid publish date: '+id);
-  output.push({id,name,description,provider,url,publishedAt,enabled:r.enabled!==false,...(typeof r.productId==='string'?{productId:r.productId}:{}),...(typeof r.experimentId==='string'?{experimentId:r.experimentId}:{}),...(/^[A-Za-z0-9_-]{11}$/.test(r.youtubeVideoId||'')?{youtubeVideoId:r.youtubeVideoId}:{})});
+  const videos = [];
+  if (r.videos !== undefined && !Array.isArray(r.videos)) throw Error('Invalid video list: '+id);
+  const videoIds = new Set();
+  for (const video of r.videos || []) {
+    if (!video || typeof video !== 'object' || !/^[A-Za-z0-9_-]{11}$/.test(video.id || '') || videoIds.has(video.id)) throw Error('Invalid/duplicate video ID: '+id);
+    const title = String(video.title || '').trim();
+    if (!title || title.length > 160) throw Error('Invalid video title: '+id);
+    let thumbnail;
+    try { thumbnail = new URL(video.thumbnailUrl); } catch { throw Error('Invalid video thumbnail: '+id); }
+    if (thumbnail.protocol !== 'https:' || thumbnail.hostname !== 'i.ytimg.com' || thumbnail.username || thumbnail.password || !thumbnail.pathname.startsWith('/vi/'+video.id+'/')) throw Error('Unexpected video thumbnail: '+id);
+    videoIds.add(video.id);
+    videos.push({id:video.id,title,thumbnailUrl:thumbnail.href});
+  }
+  output.push({id,name,description,provider,url,publishedAt,enabled:r.enabled!==false,...(videos.length?{videos}:{}),...(typeof r.productId==='string'?{productId:r.productId}:{}),...(typeof r.experimentId==='string'?{experimentId:r.experimentId}:{}),...(/^[A-Za-z0-9_-]{11}$/.test(r.youtubeVideoId||'')?{youtubeVideoId:r.youtubeVideoId}:{})});
 }
 const content = `window.PRODUCTS = ${JSON.stringify(output,null,2).replaceAll('<','\\u003c').replaceAll('>','\\u003e').replaceAll('&','\\u0026')};\n`;
 fs.writeFileSync(path.join(root,'public','products.js'),content,'utf8');
 console.log(`Built ${output.length} product(s) in public/products.js`);
+
