@@ -1,9 +1,6 @@
 name: Review SUZURI Drafts
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/pod-review.yml', 'pod/review-products.py']
 permissions:
   contents: read
 jobs:
