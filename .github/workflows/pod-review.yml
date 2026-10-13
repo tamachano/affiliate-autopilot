@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['.github/workflows/pod-review.yml']
+    paths: ['.github/workflows/pod-review.yml', 'pod/review-products.py']
 permissions:
   contents: read
 jobs:
