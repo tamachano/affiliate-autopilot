@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-10-13T06:17:20Z",
+  "account": "tamachano_pod",
+  "run_url": "https://github.com/tamachano/affiliate-autopilot/actions/runs/38355824970",
+  "status": "registered_private",
+  "visual_review": "pending",
+  "products": [
+    {
+      "sku": "01-cat-pouch",
+      "material_id": 21144370,
+      "product_id": 91633664,
+      "published": false,
+      "price_with_tax": 1750,
+      "profit": 400,
+      "url": "https://suzuri.jp/tamachano_pod/21144370/flat-pouch/s/natural"
+    },
+    {
+      "sku": "02-coffee-mug",
+      "material_id": 21144372,
+      "product_id": 91633667,
+      "published": false,
+      "price_with_tax": 2596,
+      "profit": 500,
+      "url": "https://suzuri.jp/tamachano_pod/21144372/mug/m/white"
+    },
+    {
+      "sku": "03-reading-tote",
+      "material_id": 21144374,
+      "product_id": 91633668,
+      "published": false,
+      "price_with_tax": 3410,
+      "profit": 500,
+      "url": "https://suzuri.jp/tamachano_pod/21144374/tote-bag/m/natural"
+    }
+  ]
+}
