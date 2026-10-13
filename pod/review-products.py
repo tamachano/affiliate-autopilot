@@ -1,22 +1,19 @@
-"""Read-only verification of exactly the three approved SUZURI products."""
+"""Verify approved products while explicitly retaining their private visibility."""
 import json,os,urllib.request,urllib.error
 from pathlib import Path
 from urllib.parse import urlparse
 expected={91633664:(21144370,1750),91633667:(21144372,2596),91633668:(21144374,3410)}
 root=Path('pod-review');root.mkdir(exist_ok=True)
 token=os.environ['SUZURI_API_TOKEN']
-def get(path):
- req=urllib.request.Request('https://suzuri.jp/api/v1/'+path,headers={'Authorization':'Bearer '+token,'Accept':'application/json'})
+def get(path,body=None):
+ req=urllib.request.Request('https://suzuri.jp/api/v1/'+path,data=None if body is None else json.dumps(body).encode(),headers={'Authorization':'Bearer '+token,'Accept':'application/json','Content-Type':'application/json'},method='GET' if body is None else 'PUT')
  try:
   with urllib.request.urlopen(req,timeout=45) as r:return json.load(r)
  except urllib.error.HTTPError as e:raise RuntimeError('SUZURI HTTP '+str(e.code)) from None
 report=[]
-listed=get('products?userName=tamachano_pod&limit=50').get('products',[])
-print('Owner product list count: '+str(len(listed)))
 for pid,(mid,price) in expected.items():
- matches=[p for p in listed if p.get('id')==pid]
- if len(matches)!=1:raise RuntimeError('Private product not exposed by read API: '+str(pid))
- p=matches[0]
+ p=get('products/'+str(pid),{'published':False})['product']
+ if p.get('published') is not False:raise RuntimeError('Private visibility not confirmed')
  m=p['material']
  if p['id']!=pid or m['id']!=mid or m['user']['name']!='tamachano_pod':raise RuntimeError('Ownership mismatch')
  if m.get('violation'):raise RuntimeError('Platform violation flag')
