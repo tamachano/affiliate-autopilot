@@ -8,6 +8,7 @@ import { createExperiment, getRecentClosedExperiments, openDb, saveRun } from '.
 import { buildPlanningPrompt, defaultExperiment, writePlanningPrompt } from './experiment.js';
 import { uniqueRunDir, writeJson } from './utils.js';
 import { createAssetManifest } from './workflow.js';
+import { buildCreativeResearchContext, creativeResearchMarkdown } from './creative-research.js';
 
 export function runAffiliate(root: string, rawTheme: string, options: { productIds?: string[] } = {}) {
   const theme = rawTheme.trim() || '学生向け便利グッズ';
@@ -20,6 +21,7 @@ export function runAffiliate(root: string, rawTheme: string, options: { productI
     throw new Error('候補商品が3件未満です。data/products.seed.json に候補を追加してください。');
   }
 
+  const creativeResearch = buildCreativeResearchContext(root, top);
   const script = generateScript(theme, top);
   const storyboard = generateStoryboard(top);
   const compliance = complianceReport(top);
@@ -38,6 +40,10 @@ export function runAffiliate(root: string, rawTheme: string, options: { productI
     candidates: researched
   });
   writeJson(path.join(outputDir, 'products.json'), top);
+  if (creativeResearch) {
+    writeJson(path.join(outputDir, 'creative-references.json'), creativeResearch);
+    fs.writeFileSync(path.join(outputDir, 'creative-reference-brief.md'), creativeResearchMarkdown(creativeResearch), 'utf8');
+  }
   writeJson(path.join(outputDir, 'scoring.json'), ranked.map((p, i) => ({
     rank: i + 1,
     id: p.id,
@@ -62,7 +68,7 @@ export function runAffiliate(root: string, rawTheme: string, options: { productI
   saveRun(db, { id: runId, theme, createdAt, outputDir, products: top });
   createExperiment(db, experiment);
   const recentLearnings = getRecentClosedExperiments(db, 5);
-  const prompt = buildPlanningPrompt({
+  const basePrompt = buildPlanningPrompt({
     experiment,
     products: top,
     scriptTitle: script.title,
@@ -71,6 +77,7 @@ export function runAffiliate(root: string, rawTheme: string, options: { productI
     complianceSummary: compliance.productChecks.flatMap((x: any) => x.blocking.map((y: string) => `${x.name}: ${y}`)),
     recentLearnings
   });
+  const prompt = creativeResearch ? `${basePrompt}\n\n${creativeResearchMarkdown(creativeResearch)}` : basePrompt;
   const planningPromptPath = writePlanningPrompt(outputDir, prompt);
   db.close();
 
@@ -92,6 +99,7 @@ export function runAffiliate(root: string, rawTheme: string, options: { productI
     youtubeText,
     tiktokText,
     compliance,
+    creativeResearch,
     experiment,
     planningPrompt: prompt
   };

@@ -36,3 +36,11 @@ Japanese TTS, burned-in subtitles, actual YouTube upload and automatic affiliate
 `npm ci --ignore-scripts --no-audit --no-fund` and `npm test` in autopilot run full TypeScript checking and four integration tests. Tests cover one-product preparation, unchanged three-product planning, a synthetic 15-second video fixture, successful reviewed proposal export, unchanged experiment identity on publish, rejection of changed final bytes, rejection of empty manifests and string permission flags. The synthetic footage is test-only and never uploaded or delivered as an advertisement.
 
 The root website keeps its existing build and deployment checks. Actual cloud execution and production checks must be inspected before claiming success.
+
+## Creative research references
+
+After product selection, the pipeline reads data/creative-research.json when present. It writes creative-references.json and creative-reference-brief.md into the planning run and appends the same evidence to the planning prompt. Documented public metadata and unproven hypotheses are distinct. Relevant low-view comparison videos are included. Missing databases preserve previous planning behavior.
+
+The 2026-10-14 research found 177 candidates, obtained 36 public metadata records, and selected 20 main examples plus 6 comparisons. Full video, audio, and thumbnail visual reviews remain unverified because media retrieval and playback failed. Do not infer subtitle, camera, voice, or opening design from titles. Views do not prove clicks, sales, or causal editing effects. These references never override asset, disclosure, final-file, or publication-approval gates.
+
+Verification: TypeScript build, existing four campaign integration tests, product-category reference routing, preservation of unverified evidence flags, missing-database compatibility, and a real one-product planning run that produced five references while remaining publish-blocked.

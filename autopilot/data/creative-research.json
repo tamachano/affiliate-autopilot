@@ -1,0 +1,757 @@
+{
+  "meta": {
+    "version": "1.0",
+    "created_at": "2026-10-14T04:04:09.077235+00:00",
+    "status": "PUBLIC_METADATA_RESEARCH; FULL_CONTENT_REVIEW_PENDING",
+    "discovered_candidates": 177,
+    "metadata_verified": 36,
+    "selected_count": 20,
+    "comparison_count": 6,
+    "strict_youtube_ranking": false,
+    "paid_services_used": false,
+    "media_redistributed": false,
+    "review_limit": "動画・音声・プレビュー・サムネイルのバイナリ取得不可。ブラウザでも対象1本がreadyState=0、currentTime=0。タイトルから本編を推定しない。"
+  },
+  "records": [
+    {
+      "video_id": "raues4JGz1U",
+      "url": "https://www.youtube.com/shorts/raues4JGz1U",
+      "title": "これはアカン!!　買って後悔した文房具4選 #shorts",
+      "channel": "Seasar Stationery",
+      "observed_at": "2026-10-14T03:54:16.750103+00:00",
+      "view_count": 22300182,
+      "like_count": 405213,
+      "duration_seconds": 60,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "confirmed_in_description"
+    },
+    {
+      "video_id": "m-AOngJ11H4",
+      "url": "https://www.youtube.com/shorts/m-AOngJ11H4",
+      "title": "勉強のために買ってよかったモノ TOP3 #Shorts",
+      "channel": "ブレイクスルー佐々木",
+      "observed_at": "2026-10-14T03:54:16.750808+00:00",
+      "view_count": 8016470,
+      "like_count": 200985,
+      "duration_seconds": 53,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "confirmed_in_description"
+    },
+    {
+      "video_id": "o2lI5yVPT9w",
+      "url": "https://www.youtube.com/shorts/o2lI5yVPT9w",
+      "title": "浮遊するペン!?　Hoverpen 3.0 爆速紹介 #shorts",
+      "channel": "Seasar Stationery",
+      "observed_at": "2026-10-14T03:54:16.751460+00:00",
+      "view_count": 5876652,
+      "like_count": 128151,
+      "duration_seconds": 60,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "confirmed_in_description"
+    },
+    {
+      "video_id": "wPzzMiPuHek",
+      "url": "https://www.youtube.com/shorts/wPzzMiPuHek",
+      "title": "最後のまじ便利すぎて手放せない😳❤️#ニトリ#ニトリ購入品紹介#ニトリ商品#一人暮らし#購入品紹介#暮らしに役立つ#ニトリおすすめ#プチプラ#便利グッズ#便利グッズ暮らし#キッチン#shorts",
+      "channel": "バズ美容モンスター😈💄【コスメ・スキンケア】",
+      "observed_at": "2026-10-14T03:54:16.751797+00:00",
+      "view_count": 3233526,
+      "like_count": 38636,
+      "duration_seconds": 46,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "xvgxL7JFxZw",
+      "url": "https://www.youtube.com/shorts/xvgxL7JFxZw",
+      "title": "これ考えたダイソー天才！！ #便利 #便利アイテム #便利グッズ #ダイソー #short",
+      "channel": "かい | 1分でわかる暮らし術",
+      "observed_at": "2026-10-14T03:54:32.637528+00:00",
+      "view_count": 1455479,
+      "like_count": 11017,
+      "duration_seconds": 26,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "v1YR7AP6fq4",
+      "url": "https://www.youtube.com/shorts/v1YR7AP6fq4",
+      "title": "ガチで買ってよかったトラベルグッズ3選！ #shorts #旅行 #旅行グッズ #便利グッズ",
+      "channel": "りりの淡色デスクライフ",
+      "observed_at": "2026-10-14T03:54:32.646196+00:00",
+      "view_count": 1132915,
+      "like_count": 15525,
+      "duration_seconds": 59,
+      "role": "reserve",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "OpZbtdJuH1A",
+      "url": "https://www.youtube.com/shorts/OpZbtdJuH1A",
+      "title": "買って本当によかったAmazon神商品あげてけ",
+      "channel": "生活捗るラボ",
+      "observed_at": "2026-10-14T03:54:32.708436+00:00",
+      "view_count": 1678951,
+      "like_count": 18372,
+      "duration_seconds": 53,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "Unc7XB-Bw8w",
+      "url": "https://www.youtube.com/shorts/Unc7XB-Bw8w",
+      "title": "あまり知られてないけど買ってクソよかったAmazonの神商品あげてけw",
+      "channel": "生活捗るラボ",
+      "observed_at": "2026-10-14T03:54:32.711767+00:00",
+      "view_count": 906272,
+      "like_count": 9608,
+      "duration_seconds": 51,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "tpNn1uesavY",
+      "url": "https://www.youtube.com/shorts/tpNn1uesavY",
+      "title": "【2ch有益】ボーナスで買わないと一生後悔する神商品TOP10 #shorts",
+      "channel": "2ch失敗学研究所",
+      "observed_at": "2026-10-14T03:54:49.110572+00:00",
+      "view_count": 2989003,
+      "like_count": 32985,
+      "duration_seconds": 60,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "ugCTjb62uz4",
+      "url": "https://www.youtube.com/shorts/ugCTjb62uz4",
+      "title": "【2024年最新版】ちょっと高いけどQOLがクソ上がる神商品あげてけw",
+      "channel": "生活捗るラボ",
+      "observed_at": "2026-10-14T03:54:49.116149+00:00",
+      "view_count": 1725268,
+      "like_count": 18415,
+      "duration_seconds": 54,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "confirmed_platform_badge"
+    },
+    {
+      "video_id": "BSeeAZNtch4",
+      "url": "https://www.youtube.com/shorts/BSeeAZNtch4",
+      "title": "【楽天買って正解】#shorts #便利グッズ #便利アイテム #楽天 #購入品",
+      "channel": "きんぐ │ 自分ウケする暮らし",
+      "observed_at": "2026-10-14T03:54:49.118691+00:00",
+      "view_count": 230232,
+      "like_count": 4218,
+      "duration_seconds": 30,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "0zMh7AR7Gkg",
+      "url": "https://www.youtube.com/shorts/0zMh7AR7Gkg",
+      "title": "QOL爆上がりアイテム4選❤️‍🔥すべて楽天で購入してます！#楽天 #楽天購入品 #二人暮らし #ふたり暮らし #2人暮らし",
+      "channel": "かえまる⌇アラサー保育士の暮らし",
+      "observed_at": "2026-10-14T03:54:49.172009+00:00",
+      "view_count": 137687,
+      "like_count": 2672,
+      "duration_seconds": 57,
+      "role": "reserve",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "Y3f-85jSkjM",
+      "url": "https://www.youtube.com/shorts/Y3f-85jSkjM",
+      "title": "【楽天購入品7位〜１位】ごめんなさい。便利すぎて紹介するの躊躇してた…🥺アイテムは楽天ルームから検索してね🔍#便利アイテム #便利グッズ #楽天お買い物マラソン#楽天購入品 #時短アイテム",
+      "channel": "ものこと -ガジェットに囲まれた暮らし-",
+      "observed_at": "2026-10-14T03:54:49.203634+00:00",
+      "view_count": 38605,
+      "like_count": 238,
+      "duration_seconds": 34,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "8aPEgW7ultY",
+      "url": "https://www.youtube.com/shorts/8aPEgW7ultY",
+      "title": "【楽天購入品】本気で買ってよかったと唸る5つのアイテム💡✊🏻✨#楽天 #楽天room#買ってよかったもの #購入品 #購入品紹介 #購入品レビュー #一人暮らし #便利グッズ #部屋紹介",
+      "channel": "ものこと -ガジェットに囲まれた暮らし-",
+      "observed_at": "2026-10-14T03:55:10.036635+00:00",
+      "view_count": 42397,
+      "like_count": 484,
+      "duration_seconds": 35,
+      "role": "reserve",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "O6pFRUxlbbM",
+      "url": "https://www.youtube.com/shorts/O6pFRUxlbbM",
+      "title": "こんなスタンド欲しかった！ #shorts #デスク周り #ゲーム部屋 #ガジェット",
+      "channel": "りりの淡色デスクライフ",
+      "observed_at": "2026-10-14T03:55:10.085537+00:00",
+      "view_count": 1909164,
+      "like_count": 41552,
+      "duration_seconds": 29,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "qDNqpxcTzl8",
+      "url": "https://www.youtube.com/shorts/qDNqpxcTzl8",
+      "title": "デスク周りにオススメな便利ガジェット5選【2025年9月版】 #amazon #desksetup  #tech",
+      "channel": "shota / 25歳の壁",
+      "observed_at": "2026-10-14T03:55:10.094376+00:00",
+      "view_count": 846285,
+      "like_count": 10319,
+      "duration_seconds": 60,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "EGdBSTzIQmE",
+      "url": "https://www.youtube.com/shorts/EGdBSTzIQmE",
+      "title": "結局、毎日触っているデスクアイテム5選！#デスク周り #ガジェット #購入品紹介",
+      "channel": "だまおのモノ×ライフ",
+      "observed_at": "2026-10-14T03:55:10.184215+00:00",
+      "view_count": 764181,
+      "like_count": 8455,
+      "duration_seconds": 70,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "SRs8kLc0214",
+      "url": "https://www.youtube.com/shorts/SRs8kLc0214",
+      "title": "〔Amazon購入品〕期待してなかったけど予想を裏切られて「買ってよかった」と思う、デスク周りの5つのアイテム😌💭#amazonプライム #プライム感謝祭#アマゾン#デスク周り #デスク環境",
+      "channel": "ものこと -ガジェットに囲まれた暮らし-",
+      "observed_at": "2026-10-14T03:55:31.446476+00:00",
+      "view_count": 312057,
+      "like_count": 3368,
+      "duration_seconds": 33,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "MkSG8P9Ev3s",
+      "url": "https://www.youtube.com/shorts/MkSG8P9Ev3s",
+      "title": "3000円以下で生活がガチで変わる神商品挙げてけww【2ch有益スレ】 #2ch #有益スレ #買ってよかった #神商品 #Amazon",
+      "channel": "くらべる10選",
+      "observed_at": "2026-10-14T03:55:31.463704+00:00",
+      "view_count": 561,
+      "like_count": 2,
+      "duration_seconds": 54,
+      "role": "comparison",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "confirmed_in_description"
+    },
+    {
+      "video_id": "e4RTWRiBBx8",
+      "url": "https://www.youtube.com/shorts/e4RTWRiBBx8",
+      "title": "100均で買える地味に神なアイテム挙げてけww【2ch有益スレ】 #2ch #有益スレ #100均 #便利グッズ #収納",
+      "channel": "くらべる10選",
+      "observed_at": "2026-10-14T03:55:31.467400+00:00",
+      "view_count": 1142,
+      "like_count": 5,
+      "duration_seconds": 39,
+      "role": "comparison",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "vZsMuMXhssM",
+      "url": "https://www.youtube.com/shorts/vZsMuMXhssM",
+      "title": "Amazonで買える生活がガチで捗る神商品ランキング #amazon #おすすめ #2ch #shorts",
+      "channel": "通勤雑学",
+      "observed_at": "2026-10-14T03:55:31.547273+00:00",
+      "view_count": 388,
+      "like_count": 6,
+      "duration_seconds": 56,
+      "role": "comparison",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "6tjoDAY3Nfk",
+      "url": "https://www.youtube.com/shorts/6tjoDAY3Nfk",
+      "title": "【衝撃】毎日がガチで激変した神文房具TOP3！ #Shorts",
+      "channel": "QOL爆上がりグッズまとめ",
+      "observed_at": "2026-10-14T03:55:52.477358+00:00",
+      "view_count": 207,
+      "like_count": null,
+      "duration_seconds": 50,
+      "role": "comparison",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "confirmed_in_description"
+    },
+    {
+      "video_id": "vxg3YQSJpu4",
+      "url": "https://www.youtube.com/shorts/vxg3YQSJpu4",
+      "title": "よく使う操作、左手に集合。｜12キー左手デバイス",
+      "channel": "快適デスク環境ログ",
+      "observed_at": "2026-10-14T03:55:52.589905+00:00",
+      "view_count": 1002,
+      "like_count": 13,
+      "duration_seconds": 23,
+      "role": "comparison",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "xfFymNhCMsM",
+      "url": "https://www.youtube.com/shorts/xfFymNhCMsM",
+      "title": "電源コード、本体にしまう。｜コードをしまえる電源タップ",
+      "channel": "快適デスク環境ログ",
+      "observed_at": "2026-10-14T03:55:52.623136+00:00",
+      "view_count": 985,
+      "like_count": 6,
+      "duration_seconds": 20,
+      "role": "comparison",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "KZT3uy-6ous",
+      "url": "https://www.youtube.com/shorts/KZT3uy-6ous",
+      "title": "もっと早く使えば良かったガチで便利な神文具7選　#ついつい気になる有益情報局",
+      "channel": "2chお金情報局",
+      "observed_at": "2026-10-14T03:55:52.688171+00:00",
+      "view_count": 627917,
+      "like_count": 5519,
+      "duration_seconds": 51,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "epbbN7ID_TM",
+      "url": "https://www.youtube.com/shorts/epbbN7ID_TM",
+      "title": "2025年2月買ってよかったもの第5位〜第1位　#ガジェット",
+      "channel": "たいち | ガジェット紹介",
+      "observed_at": "2026-10-14T03:56:13.821988+00:00",
+      "view_count": 4498440,
+      "like_count": 86090,
+      "duration_seconds": 70,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "bQLDWR3GhFU",
+      "url": "https://www.youtube.com/shorts/bQLDWR3GhFU",
+      "title": "【2026年上半期ベストバイ5選。】#shorts #購入品紹介 #bestbuy #買ってよかった #便利グッズ",
+      "channel": "きんぐ │ 自分ウケする暮らし",
+      "observed_at": "2026-10-14T03:56:13.830114+00:00",
+      "view_count": 2035479,
+      "like_count": 21462,
+      "duration_seconds": 62,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "confirmed_in_description"
+    },
+    {
+      "video_id": "4oiiQJiRMKQ",
+      "url": "https://www.youtube.com/shorts/4oiiQJiRMKQ",
+      "title": "お洒落デスク界隈で良く見る“アレ”取り付けてみた🤍#shorts#ikea#有孔ボード#デスク周り#白系統#ホワイトインテリア#お部屋紹介#ゲーム部屋",
+      "channel": "みくろ",
+      "observed_at": "2026-10-14T03:56:13.852321+00:00",
+      "view_count": 1988104,
+      "like_count": 36503,
+      "duration_seconds": 35,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "F8TKs8IANs8",
+      "url": "https://www.youtube.com/shorts/F8TKs8IANs8",
+      "title": "【デスク環境】デスク周りおすすめアイテム10選【後編】 #shorts #デスク紹介 #デスク周り #買ってよかった #暮らし",
+      "channel": "たか︴ガレージ秘密基地づくり",
+      "observed_at": "2026-10-14T03:56:13.895517+00:00",
+      "view_count": 1141854,
+      "like_count": 22338,
+      "duration_seconds": 38,
+      "role": "reserve",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "bGML3JkwJ-M",
+      "url": "https://www.youtube.com/shorts/bGML3JkwJ-M",
+      "title": "【最近買って良かったアイテム３選。】#shorts #アイデア商品 #便利アイテム #便利グッズ #暮らしの道具 #便利グッズ紹介 #買ってよかった #生活雑貨 #愛用品",
+      "channel": "きんぐ │ 自分ウケする暮らし",
+      "observed_at": "2026-10-14T03:56:40.133107+00:00",
+      "view_count": 701506,
+      "like_count": 4441,
+      "duration_seconds": 39,
+      "role": "reserve",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "A-rlrPSFih4",
+      "url": "https://www.youtube.com/shorts/A-rlrPSFih4",
+      "title": "【無印良品】売り切れ続出のミニポーチがワザありで便利すぎる…✨ #shorts #無印良品 #買って良かった #便利グッズ #購入品紹介",
+      "channel": "つな",
+      "observed_at": "2026-10-14T03:56:40.206257+00:00",
+      "view_count": 889637,
+      "like_count": 2310,
+      "duration_seconds": 17,
+      "role": "selected",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "gZNbHkmbPaU",
+      "url": "https://www.youtube.com/shorts/gZNbHkmbPaU",
+      "title": "【2ch有益】ワークマンで買い逃すと一生後悔する神商品TOP7 #shorts",
+      "channel": "2ch失敗学研究所",
+      "observed_at": "2026-10-14T03:56:40.219763+00:00",
+      "view_count": 1629818,
+      "like_count": 12589,
+      "duration_seconds": 59,
+      "role": "reserve",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "u3VlqMzAIb0",
+      "url": "https://www.youtube.com/shorts/u3VlqMzAIb0",
+      "title": "【2ch有益】ワークマンで買える小物ジャンルの神商品TOP7 #shorts",
+      "channel": "2ch失敗学研究所",
+      "observed_at": "2026-10-14T03:56:40.225297+00:00",
+      "view_count": 781121,
+      "like_count": 8535,
+      "duration_seconds": 60,
+      "role": "reserve",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "ssLOFVVID-U",
+      "url": "https://www.youtube.com/shorts/ssLOFVVID-U",
+      "title": "【暮らしを少し良くするモノ。】#shorts #便利グッズ #購入品 #買ってよかった #暮らしチャンネル",
+      "channel": "きんぐ │ 自分ウケする暮らし",
+      "observed_at": "2026-10-14T03:57:02.299358+00:00",
+      "view_count": 690589,
+      "like_count": 5174,
+      "duration_seconds": 32,
+      "role": "reserve",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "G6QvfkSzpa0",
+      "url": "https://www.youtube.com/shorts/G6QvfkSzpa0",
+      "title": "【Amazonこれ買って！】#shorts #暮らし #生活 #amazon #便利グッズ",
+      "channel": "きんぐ │ 自分ウケする暮らし",
+      "observed_at": "2026-10-14T03:57:02.316761+00:00",
+      "view_count": 855295,
+      "like_count": 8277,
+      "duration_seconds": 24,
+      "role": "reserve",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    },
+    {
+      "video_id": "WvQ29EOtO4E",
+      "url": "https://www.youtube.com/shorts/WvQ29EOtO4E",
+      "title": "DAISO ロボット掃除機　#shorts #便利 #便利アイテム #便利グッズ #商品紹介",
+      "channel": "あん⌇ホワイトアイテムと便利な暮らし",
+      "observed_at": "2026-10-14T03:57:02.357110+00:00",
+      "view_count": 1728118,
+      "like_count": 5722,
+      "duration_seconds": 17,
+      "role": "reserve",
+      "content_review": {
+        "video_playback": "not_verified",
+        "audio_listening": "not_verified",
+        "thumbnail_visual": "not_verified"
+      },
+      "affiliate_status": "not_confirmed"
+    }
+  ],
+  "patterns": [
+    {
+      "id": "P01",
+      "name": "対象場面を絞る",
+      "observed_basis": "勉強／デスク／旅行などの場面をタイトルに置く",
+      "reference_ids": [
+        "m-AOngJ11H4",
+        "qDNqpxcTzl8"
+      ],
+      "hypothesis": "自分の生活に関係するかを即判断できる可能性",
+      "cost": "低：台詞・字幕だけで試せる",
+      "limits": "場面への需要、商品との適合",
+      "evidence_level": "public_title_or_description; effect_unproven"
+    },
+    {
+      "id": "P02",
+      "name": "物と不便を具体化",
+      "observed_basis": "一般的な便利さよりスタンド・筆箱・配線などを特定する",
+      "reference_ids": [
+        "O6pFRUxlbbM",
+        "4oiiQJiRMKQ"
+      ],
+      "hypothesis": "抽象的なQOLより使う場面を想像しやすい可能性",
+      "cost": "低：商品を変えず表現変更",
+      "limits": "解決場面の実物確認は別途必要",
+      "evidence_level": "public_title_or_description; effect_unproven"
+    },
+    {
+      "id": "P03",
+      "name": "期待との差を示す",
+      "observed_basis": "期待していなかった→役立ったというタイトルの構造",
+      "reference_ids": [
+        "SRs8kLc0214"
+      ],
+      "hypothesis": "予想の更新を見届けたくなる可能性",
+      "cost": "低：未使用なら購入体験を語らず発見の構造にする",
+      "limits": "実使用者の信用がある場合の表現をそのまま借りない",
+      "evidence_level": "public_title_or_description; effect_unproven"
+    },
+    {
+      "id": "P04",
+      "name": "見る範囲を先に示す",
+      "observed_basis": "TOP3／4選／5選など終点を明示する",
+      "reference_ids": [
+        "m-AOngJ11H4",
+        "raues4JGz1U",
+        "qDNqpxcTzl8"
+      ],
+      "hypothesis": "残りの情報量を予測できる可能性",
+      "cost": "中：3商品は3件の素材権利確認が必要",
+      "limits": "商品数が多ければ良いとは未実証。単品へ順位を付けない",
+      "evidence_level": "public_title_or_description; effect_unproven"
+    },
+    {
+      "id": "P05",
+      "name": "弱点や適合条件を残す",
+      "observed_basis": "否定的な選定や買って後悔という題材",
+      "reference_ids": [
+        "raues4JGz1U"
+      ],
+      "hypothesis": "良い点しか言わない広告より判断材料になる可能性",
+      "cost": "低：メーカー仕様に基づく1注意点",
+      "limits": "根拠のない批判・個人経験の捏造は不可",
+      "evidence_level": "public_title_or_description; effect_unproven"
+    },
+    {
+      "id": "P06",
+      "name": "価格は条件として示す",
+      "observed_basis": "高めの商品や当時の低価格商品も同じ調査範囲にある",
+      "reference_ids": [
+        "ugCTjb62uz4",
+        "bQLDWR3GhFU"
+      ],
+      "hypothesis": "価格に対する便益の納得が重要という仮説",
+      "cost": "低：確認できた価格だけ出す",
+      "limits": "安さと再生数・購入率の因果は不明。過去価格を現行価格にしない",
+      "evidence_level": "public_title_or_description; effect_unproven"
+    },
+    {
+      "id": "P07",
+      "name": "変化の出来事を題材にする",
+      "observed_basis": "取り付けてみた、という行動をタイトルにする",
+      "reference_ids": [
+        "4oiiQJiRMKQ"
+      ],
+      "hypothesis": "結果がどう変わるかを知りたくなる可能性",
+      "cost": "中：実演可能な素材か自作の説明図が必要",
+      "limits": "本編で実際にBefore/Afterを使ったかは未確認",
+      "evidence_level": "public_title_or_description; effect_unproven"
+    },
+    {
+      "id": "P08",
+      "name": "日常の使用頻度へ接続",
+      "observed_basis": "毎日触っている、という選定理由を明示する",
+      "reference_ids": [
+        "EGdBSTzIQmE"
+      ],
+      "hypothesis": "珍しさより生活での用途を評価しやすい可能性",
+      "cost": "低：自分の実使用談は捏造せず、メーカー用途で表現する",
+      "limits": "話者の生活・専門性に依存する部分がある",
+      "evidence_level": "public_title_or_description; effect_unproven"
+    },
+    {
+      "id": "P09",
+      "name": "商品名とリンクを対応させる",
+      "observed_basis": "商品ごとに名前・リンクを説明欄へ記載",
+      "reference_ids": [
+        "BSeeAZNtch4",
+        "qDNqpxcTzl8"
+      ],
+      "hypothesis": "欲しい商品を探し直す手間を減らす可能性",
+      "cost": "低：既存商品紹介ページに対応カードを置く",
+      "limits": "Shorts説明URLは直接クリック不可。プロフィール等のクリックできる経路が必要",
+      "evidence_level": "public_title_or_description; effect_unproven"
+    },
+    {
+      "id": "P10",
+      "name": "次の操作を具体化する",
+      "observed_basis": "プロフィールのROOMと検索語の案内",
+      "reference_ids": [
+        "Y3f-85jSkjM"
+      ],
+      "hypothesis": "どこへ行き何を探すか分かり、離脱を減らす可能性",
+      "cost": "低：プロフィール→商品No.003などへ統一",
+      "limits": "プロフィール設定と購入先の型番は未検証。売上向上の実証ではない",
+      "evidence_level": "public_title_or_description; effect_unproven"
+    }
+  ]
+}
