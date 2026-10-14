@@ -1,12 +1,94 @@
 window.PRODUCTS = [
   {
+    "id": "pe-scissors",
+    "name": "DRESS フィッシングPEラインシザー",
+    "description": "ギザギザの刃を備えたPEライン用ハサミ。ステンレス刃とTPRハンドルを採用。",
+    "provider": "amazon",
+    "url": "https://www.amazon.co.jp/dp/B0H2TPD6BW/ref=nosim?tag=tamama0a-22",
+    "publishedAt": "",
+    "enabled": false,
+    "collection": "outdoor-top5-v3",
+    "rank": 1,
+    "variant": "約130×80mm／刃長30mm",
+    "caution": "釣り用ラインの切断用。使用後は真水で洗って乾燥させ、可動部を定期的に注油してください。",
+    "affiliateVerified": false
+  },
+  {
+    "id": "folding-box",
+    "name": "DRESS 折りたたみタックルボックスマルチ タックルケース",
+    "description": "透明なフタで中身を確認できる、折りたたみ式の小物収納ケース。ブラック・Sサイズ（約12×20×9cm）を紹介します。",
+    "provider": "amazon",
+    "url": "https://www.amazon.co.jp/dp/B0F5GMLZNC/ref=nosim?tag=tamama0a-22",
+    "publishedAt": "",
+    "enabled": false,
+    "collection": "outdoor-top5-v3",
+    "rank": 2,
+    "variant": "ブラック／折りたたみ・S",
+    "caution": "写真内の小物は付属しません。Amazon限定のグレーや旧型ブラックと区別。",
+    "affiliateVerified": false
+  },
+  {
+    "id": "metal-ice-pack",
+    "name": "DRESS 金属製保冷剤 チタンコート アイスコアシールド",
+    "description": "ステンレス外装にチタンコートを施した金属製保冷剤。ブラック・1個を紹介します。見慣れない外観が短い動画の見せ場になります。",
+    "provider": "amazon",
+    "url": "https://www.amazon.co.jp/dp/B0H1BYQ838/ref=nosim?tag=tamama0a-22",
+    "publishedAt": "",
+    "enabled": false,
+    "collection": "outdoor-top5-v3",
+    "rank": 3,
+    "variant": "ブラック・1個",
+    "caution": "事前の冷凍が必要。冷えた金属の取り扱いは商品説明に従う。保冷時間は断定しません。",
+    "affiliateVerified": false
+  },
+  {
+    "id": "waterproof-socks",
+    "name": "DRESS 防水ニットソックス [Z.O.GUARD(ジオガード)]",
+    "description": "防水層を備えたニットソックス。今回はMサイズ（24〜26cm）を紹介。雨の日や水辺での足元対策を考える人向けです。",
+    "provider": "amazon",
+    "url": "https://www.amazon.co.jp/dp/B0F6CBKNQ3/ref=nosim?tag=tamama0a-22",
+    "publishedAt": "",
+    "enabled": false,
+    "collection": "outdoor-top5-v3",
+    "rank": 4,
+    "variant": "M：24〜26cm",
+    "caution": "履き口から水が入る可能性あり。厚手のため靴との相性を確認。",
+    "affiliateVerified": false
+  },
+  {
+    "id": "glow-band",
+    "name": "DRESS 光って留めるバンド【蓄光縛り】",
+    "description": "暗い場所で道具を見つけやすくする、蓄光式の結束バンド。光を当ててから使用し、取り外して再使用できます。",
+    "provider": "amazon",
+    "url": "https://www.amazon.co.jp/dp/B0H2GHC4RF/ref=nosim?tag=tamama0a-22",
+    "publishedAt": "",
+    "enabled": false,
+    "collection": "outdoor-top5-v3",
+    "rank": 5,
+    "variant": "20本入",
+    "caution": "簡易固定用。吊り下げ不可。発光は光の強さ・環境で変化。",
+    "affiliateVerified": false
+  },
+  {
     "id": "003",
     "name": "ソニック カドノオモクリップ（SP-1667）",
     "description": "本の角に挟む重り付きクリップ。開いたページを押さえるのを助けます。",
     "provider": "rakuten",
     "url": "https://a.r10.to/hg9i7m",
-    "publishedAt": "2026-10-12",
-    "enabled": true
+    "publishedAt": "2026-10-14",
+    "enabled": true,
+    "videos": [
+      {
+        "id": "2NyGBR1-RHk",
+        "title": "片手、ずっと支える係になってない？📖 #Shorts",
+        "thumbnailUrl": "https://i.ytimg.com/vi/2NyGBR1-RHk/oar3.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB\u0026rs=AOn4CLCeQi9rW5WLCKiTkEDGpSxxVIAvvQ\u0026usqp=CCk"
+      },
+      {
+        "id": "WgMR2lwTouU",
+        "title": "【超便利】本が勝手に閉じる問題、これで解決？📖 #Shorts",
+        "thumbnailUrl": "https://i.ytimg.com/vi/WgMR2lwTouU/hq720.jpg?sqp=-oaymwEkCJUDENAFSFryq4qpAxYIARUAAAAAJQAAyEI9AICiQ3gB0AEB\u0026rs=AOn4CLB0ePRALJLkvwXLnECULoA8Glw8mQ"
+      }
+    ]
   },
   {
     "id": "002",
@@ -15,7 +97,14 @@ window.PRODUCTS = [
     "provider": "amazon",
     "url": "https://www.amazon.co.jp/dp/B09YLP3LG9/ref=nosim?tag=tamama0a-22",
     "publishedAt": "2026-10-10",
-    "enabled": true
+    "enabled": true,
+    "videos": [
+      {
+        "id": "uj74bSMwDT0",
+        "title": "【かわいくお掃除】卓上クリーナー　もぐもぐズー　サンスター文具",
+        "thumbnailUrl": "https://i.ytimg.com/vi/uj74bSMwDT0/hq720.jpg?sqp=-oaymwEkCJUDENAFSFryq4qpAxYIARUAAAAAJQAAyEI9AICiQ3gB0AEB\u0026rs=AOn4CLCe8KIzNY9uYrzFxFo_lW9HJ8MEdA"
+      }
+    ]
   },
   {
     "id": "001",
@@ -24,6 +113,13 @@ window.PRODUCTS = [
     "provider": "amazon",
     "url": "https://www.amazon.co.jp/dp/B0HKCGBX7G/ref=nosim?tag=tamama0a-22",
     "publishedAt": "2026-10-09",
-    "enabled": true
+    "enabled": true,
+    "videos": [
+      {
+        "id": "xBkS6H-lyj4",
+        "title": "これ地味に欲しかった。お菓子袋を閉じるミニシーラー #shorts",
+        "thumbnailUrl": "https://i.ytimg.com/vi/xBkS6H-lyj4/oar2.jpg?sqp=-oaymwEkCJUDENAFSFqQAgHyq4qpAxMIARUAAAAAJQAAyEI9AICiQ3gB\u0026rs=AOn4CLCq3uHkfqUMlfv7zSXDQ2-qPeORdA\u0026usqp=CCk"
+      }
+    ]
   }
 ];

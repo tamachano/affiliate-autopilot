@@ -40,7 +40,13 @@ for (const r of rows) {
     videoIds.add(video.id);
     videos.push({id:video.id,title,thumbnailUrl:thumbnail.href});
   }
-  output.push({id,name,description,provider,url,publishedAt,enabled:r.enabled!==false,...(videos.length?{videos}:{}),...(typeof r.productId==='string'?{productId:r.productId}:{}),...(typeof r.experimentId==='string'?{experimentId:r.experimentId}:{}),...(/^[A-Za-z0-9_-]{11}$/.test(r.youtubeVideoId||'')?{youtubeVideoId:r.youtubeVideoId}:{})});
+  const extra = {};
+  if (r.collection !== undefined) {
+    if (r.collection !== 'outdoor-top5-v3' || !Number.isInteger(r.rank) || r.rank<1 || r.rank>5) throw Error('Invalid collection/rank: '+id);
+    if (typeof r.variant !== 'string' || r.variant.length>120 || typeof r.caution !== 'string' || r.caution.length>320) throw Error('Invalid variant/caution: '+id);
+    Object.assign(extra, {collection:r.collection, rank:r.rank, variant:r.variant, caution:r.caution, affiliateVerified:r.affiliateVerified===true});
+  }
+  output.push({id,name,description,provider,url,publishedAt,enabled:r.enabled!==false,...extra,...(videos.length?{videos}:{}),...(typeof r.productId==='string'?{productId:r.productId}:{}),...(typeof r.experimentId==='string'?{experimentId:r.experimentId}:{}),...(/^[A-Za-z0-9_-]{11}$/.test(r.youtubeVideoId||'')?{youtubeVideoId:r.youtubeVideoId}:{})});
 }
 const content = `window.PRODUCTS = ${JSON.stringify(output,null,2).replaceAll('<','\\u003c').replaceAll('>','\\u003e').replaceAll('&','\\u0026')};\n`;
 fs.writeFileSync(path.join(root,'public','products.js'),content,'utf8');
