@@ -40,9 +40,23 @@ for (const r of rows) {
     videoIds.add(video.id);
     videos.push({id:video.id,title,thumbnailUrl:thumbnail.href});
   }
-  output.push({id,name,description,provider,url,publishedAt,enabled:r.enabled!==false,...(videos.length?{videos}:{}),...(typeof r.productId==='string'?{productId:r.productId}:{}),...(typeof r.experimentId==='string'?{experimentId:r.experimentId}:{}),...(/^[A-Za-z0-9_-]{11}$/.test(r.youtubeVideoId||'')?{youtubeVideoId:r.youtubeVideoId}:{})});
+  const extra = {};
+  if (r.imageUrl !== undefined) {
+    let image;
+    try { image = new URL(r.imageUrl); } catch { throw Error('Invalid product image: '+id); }
+    if (image.protocol !== 'https:' || image.hostname !== 'm.media-amazon.com' || !image.pathname.startsWith('/images/I/') || image.username || image.password) throw Error('Unexpected product image: '+id);
+    extra.imageUrl = image.href;
+  }
+  if (r.collection !== undefined) {
+    if (!r.collection || !/^[a-z0-9-]{1,80}$/.test(r.collection.id || '') || typeof r.collection.title !== 'string' || !r.collection.title.trim() || r.collection.title.length > 160) throw Error('Invalid collection: '+id);
+    extra.collection = {id:r.collection.id,title:r.collection.title.trim()};
+  }
+  if (r.rank !== undefined) {
+    if (!Number.isInteger(r.rank) || r.rank < 1 || r.rank > 100) throw Error('Invalid rank: '+id);
+    extra.rank = r.rank;
+  }
+  output.push({id,name,description,provider,url,publishedAt,enabled:r.enabled!==false,...extra,...(videos.length?{videos}:{}),...(typeof r.productId==='string'?{productId:r.productId}:{}),...(typeof r.experimentId==='string'?{experimentId:r.experimentId}:{}),...(/^[A-Za-z0-9_-]{11}$/.test(r.youtubeVideoId||'')?{youtubeVideoId:r.youtubeVideoId}:{})});
 }
 const content = `window.PRODUCTS = ${JSON.stringify(output,null,2).replaceAll('<','\\u003c').replaceAll('>','\\u003e').replaceAll('&','\\u0026')};\n`;
 fs.writeFileSync(path.join(root,'public','products.js'),content,'utf8');
 console.log(`Built ${output.length} product(s) in public/products.js`);
-

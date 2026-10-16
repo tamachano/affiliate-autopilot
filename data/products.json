@@ -2,47 +2,77 @@
   {
     "id": "004",
     "name": "Apple AirPods Pro 3",
-    "description": "ノイズキャンセリングで、周囲の雑音を抑える。 動画の確認画像では14％OFF・36,800円（税込）。2026/10/16〜17時点の表示で、現在の価格・在庫・適用条件はAmazonでご確認ください。",
+    "description": "ノイズキャンセリングで、周囲の雑音を抑える。 確認時の表示：14％OFF・36,800円（税込）。",
     "url": "https://www.amazon.co.jp/dp/B0FQFQDN6K/ref=nosim?tag=tamama0a-22",
     "provider": "amazon",
     "publishedAt": "2026-10-17",
-    "enabled": true
+    "enabled": true,
+    "collection": {
+      "id": "amazon-sale-20261017",
+      "title": "最大60％OFF!? Amazonで今なら、家計がキツくても手が届く神商品5選"
+    },
+    "rank": 5,
+    "imageUrl": "https://m.media-amazon.com/images/I/61kX+MI8wvL._AC_SL1500_.jpg"
   },
   {
     "id": "005",
     "name": "Logicool G PRO（日本語配列・リニア／1年保証）",
-    "description": "テンキーレスで、マウスのスペースを確保。 動画の確認画像では31％OFF・9,800円（税込）。2026/10/16〜17時点の表示で、現在の価格・在庫・適用条件はAmazonでご確認ください。",
+    "description": "テンキーレスで、マウスのスペースを確保。 確認時の表示：31％OFF・9,800円（税込）。",
     "url": "https://www.amazon.co.jp/dp/B0BC135WFD/ref=nosim?tag=tamama0a-22",
     "provider": "amazon",
     "publishedAt": "2026-10-17",
-    "enabled": true
+    "enabled": true,
+    "collection": {
+      "id": "amazon-sale-20261017",
+      "title": "最大60％OFF!? Amazonで今なら、家計がキツくても手が届く神商品5選"
+    },
+    "rank": 4,
+    "imageUrl": "https://m.media-amazon.com/images/I/61eSkWURkIL._AC_SL1471_.jpg"
   },
   {
     "id": "006",
     "name": "Echo Spot（2024年発売・ブラック）",
-    "description": "アラームも天気の確認も、声をかけるだけ。 動画の確認画像では39％OFF・6,980円（税込）。2026/10/16〜17時点の表示で、現在の価格・在庫・適用条件はAmazonでご確認ください。",
+    "description": "アラームも天気の確認も、声をかけるだけ。 確認時の表示：39％OFF・6,980円（税込）。",
     "url": "https://www.amazon.co.jp/dp/B0C2S4K41G/ref=nosim?tag=tamama0a-22",
     "provider": "amazon",
     "publishedAt": "2026-10-17",
-    "enabled": true
+    "enabled": true,
+    "collection": {
+      "id": "amazon-sale-20261017",
+      "title": "最大60％OFF!? Amazonで今なら、家計がキツくても手が届く神商品5選"
+    },
+    "rank": 3,
+    "imageUrl": "https://m.media-amazon.com/images/I/71AvF88EBPL._AC_SL1500_.jpg"
   },
   {
     "id": "007",
     "name": "Anker Power Bank（25,000mAh・ブラック）",
-    "description": "巻き取りケーブル内蔵で、荷物をすっきり。 動画の確認画像では40％OFF・10,790円（税込）。2026/10/16〜17時点の表示で、現在の価格・在庫・適用条件はAmazonでご確認ください。",
+    "description": "巻き取りケーブル内蔵で、荷物をすっきり。 確認時の表示：40％OFF・10,790円（税込）。",
     "url": "https://www.amazon.co.jp/dp/B0DT4RGDSJ/ref=nosim?tag=tamama0a-22",
     "provider": "amazon",
     "publishedAt": "2026-10-17",
-    "enabled": true
+    "enabled": true,
+    "collection": {
+      "id": "amazon-sale-20261017",
+      "title": "最大60％OFF!? Amazonで今なら、家計がキツくても手が届く神商品5選"
+    },
+    "rank": 2,
+    "imageUrl": "https://m.media-amazon.com/images/I/61QMal+b+SL._AC_SL1500_.jpg"
   },
   {
     "id": "008",
     "name": "CASIO STW-1000シリーズ（ブラック／ブルー）",
-    "description": "光で充電できて、電波で時刻を補正。 動画の確認画像では60％OFF・5,907円（税込）。2026/10/16〜17時点の表示で、現在の価格・在庫・適用条件はAmazonでご確認ください。",
+    "description": "光で充電できて、電波で時刻を補正。 確認時の表示：60％OFF・5,907円（税込）。",
     "url": "https://www.amazon.co.jp/dp/B09BYT1JXP/ref=nosim?tag=tamama0a-22",
     "provider": "amazon",
     "publishedAt": "2026-10-17",
-    "enabled": true
+    "enabled": true,
+    "collection": {
+      "id": "amazon-sale-20261017",
+      "title": "最大60％OFF!? Amazonで今なら、家計がキツくても手が届く神商品5選"
+    },
+    "rank": 1,
+    "imageUrl": "https://m.media-amazon.com/images/I/71-plFoL-mL._AC_SL1500_.jpg"
   },
   {
     "id": "003",

@@ -37,6 +37,17 @@
     .other-videos p { color:#777; margin:0 0 5px } .other-videos a { display:block; color:#555; text-underline-offset:3px; padding:4px 0 }
     @media (max-width:520px) { main { padding:32px 16px 64px } .card { padding:16px } .card-content { grid-template-columns:112px minmax(0,1fr); gap:14px } .video-title { font-size:16px; margin-bottom:12px } .action { padding:11px 12px; font-size:12px } .actions { gap:4px 12px } }
     @media (max-width:350px) { .card-content { grid-template-columns:90px minmax(0,1fr); gap:12px } .video-title { font-size:15px } }
+
+    .collection { background:#fff6dd; border:1px solid #e8d7a4; border-radius:20px; padding:24px; margin-bottom:34px; scroll-margin-top:24px }
+    .collection-label { display:inline-block; color:#6e4c05; background:#ffe39a; border-radius:6px; padding:6px 10px; font-size:12px; font-weight:750; margin:0 0 12px }
+    .collection-title { font-size:clamp(21px,4.8vw,28px); line-height:1.55; letter-spacing:-.035em; margin:0 0 12px }
+    .collection-note { font-size:12px; color:#746751; line-height:1.8; margin:0 0 22px }
+    .collection .card { margin:0 0 12px; box-shadow:none } .collection .card:last-child { margin-bottom:0 }
+    .photo-content { display:grid; grid-template-columns:150px minmax(0,1fr); gap:22px; align-items:center }
+    .product-photo { width:100%; height:154px; object-fit:contain; background:white; border-radius:8px; display:block }
+    .photo-unavailable { grid-template-columns:1fr } .rank { font-size:12px; font-weight:750; color:#886013; margin:0 0 7px }
+    .past-title { margin:0 0 18px; font-size:19px }
+    @media (max-width:520px) { .collection { padding:16px 12px; border-radius:16px } .photo-content { grid-template-columns:96px minmax(0,1fr); gap:12px; align-items:start } .product-photo { height:120px } .collection .card { padding:14px 12px } .collection .name { font-size:15px; line-height:1.6 } .collection .desc { font-size:12px; margin-bottom:10px } .collection .actions { margin-top:8px } }
   </style>
   <script src="./products.js" defer></script>
   <script src="./site.js" defer></script>
@@ -48,10 +59,9 @@
   </a>
   <div class="eyebrow">SHORTS ITEM LIST</div>
   <h1>動画で紹介したモノ。</h1>
-  <p class="intro">見た動画のサムネイルから、気になった商品を探せます。動画の確認も、商品ページへの移動もここから。</p>
+  <p class="intro">動画ごとに紹介商品をまとめています。気になった商品を画像で見つけて、販売ページへ。</p>
   <div class="notice">広告・PR：このページには楽天アフィリエイトおよびAmazonアソシエイトの広告が含まれます。<br>Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。</div>
   <div class="heading"><h2>紹介した商品</h2><span id="count" class="meta"></span></div>
   <div id="items"><p class="empty">商品を読み込んでいます…</p></div>
   <footer>※ 商品情報や販売状況はリンク先でご確認ください。商品リンクは楽天市場またはAmazonなどの外部サイトへ移動します。</footer>
 </main></body></html>
-
