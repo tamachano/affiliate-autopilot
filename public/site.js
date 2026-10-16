@@ -2,25 +2,17 @@
   const root = document.getElementById('items');
   const count = document.getElementById('count');
   const products = Array.isArray(window.PRODUCTS) ? window.PRODUCTS.filter(p => p.enabled !== false) : [];
-  products.sort((a,b) => ((a.collection==='outdoor-top5-v3'?0:1)-(b.collection==='outdoor-top5-v3'?0:1)) || ((a.collection===b.collection && a.collection==='outdoor-top5-v3')?a.rank-b.rank:0) || (b.publishedAt || '').localeCompare(a.publishedAt || '') || String(b.id).localeCompare(String(a.id)));
+  products.sort((a,b) => (b.publishedAt || '').localeCompare(a.publishedAt || '') || String(b.id).localeCompare(String(a.id)));
   count.textContent = `${products.length}点`;
   root.replaceChildren();
   const make = (tag, cls, text) => { const el=document.createElement(tag); if(cls)el.className=cls; if(text)el.textContent=text; return el; };
   const videoLink = (video, cls, text) => { const a=make('a',cls,text); a.href=`https://www.youtube.com/shorts/${video.id}`; a.target='_blank'; a.rel='noopener noreferrer'; return a; };
   if (!products.length) { root.append(make('p','empty','現在、紹介している商品はありません。')); return; }
-  const ranked = products.filter(p=>p.collection==='outdoor-top5-v3');
-  if(ranked.length) {
-    const feature=make('section','collection-feature');
-    feature.append(make('p','eyebrow','外遊びの地味なイラッ TOP5'),make('h2','','動画で気になったのは、どれ？'),make('p','desc','この動画の独自選定ランキング。仕様と注意点を確認して、購入先へ。'));
-    const nav=make('nav','rank-nav');nav.setAttribute('aria-label','TOP5の商品を選ぶ');
-    for(const p of ranked){const a=make('a','',`${p.rank}位 ${p.name.replace(/^DRESS /,'')}`);a.href=`#product-${p.id}`;nav.append(a);}
-    feature.append(nav);root.append(feature);
-  }
   for (const p of products) {
     const card=make('article','card'); card.id=`product-${p.id}`;
     const videos=(Array.isArray(p.videos)?p.videos:[]).filter(v=>v && /^[A-Za-z0-9_-]{11}$/.test(v.id||'') && typeof v.title==='string' && v.title.trim());
     const body=make('div','card-body');
-    body.append(make('p','meta',p.collection==='outdoor-top5-v3'?`動画の${p.rank}位`:`商品 No.${p.id}`));
+    body.append(make('p','meta',`商品 No.${p.id}`));
     if (videos.length) {
       const content=make('div','card-content');
       const hero=videos[0]; const thumb=videoLink(hero,'thumbnail'); thumb.setAttribute('aria-label',`${hero.title} をYouTubeで見る`);
@@ -32,8 +24,6 @@
       body.append(title,make('p','product-name',p.name),make('p','desc',p.description||''));
       content.append(thumb,body);card.append(content);
     } else { body.append(make('h3','name',p.name),make('p','desc',p.description||''));card.append(body); }
-    if(p.variant)body.append(make('p','spec',`紹介仕様：${p.variant}`));
-    if(p.caution)body.append(make('p','caution',p.caution));
     const actions=make('div','actions'); let safe=null;
     const provider=p.provider==='rakuten'?'rakuten':'amazon';
     try {
