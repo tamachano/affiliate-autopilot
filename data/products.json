@@ -1,5 +1,50 @@
 [
   {
+    "id": "004",
+    "name": "Apple AirPods Pro 3",
+    "description": "ノイズキャンセリングで、周囲の雑音を抑える。 動画の確認画像では14％OFF・36,800円（税込）。2026/10/16〜17時点の表示で、現在の価格・在庫・適用条件はAmazonでご確認ください。",
+    "url": "https://www.amazon.co.jp/dp/B0FQFQDN6K/ref=nosim?tag=tamama0a-22",
+    "provider": "amazon",
+    "publishedAt": "2026-10-17",
+    "enabled": true
+  },
+  {
+    "id": "005",
+    "name": "Logicool G PRO（日本語配列・リニア／1年保証）",
+    "description": "テンキーレスで、マウスのスペースを確保。 動画の確認画像では31％OFF・9,800円（税込）。2026/10/16〜17時点の表示で、現在の価格・在庫・適用条件はAmazonでご確認ください。",
+    "url": "https://www.amazon.co.jp/dp/B0BC135WFD/ref=nosim?tag=tamama0a-22",
+    "provider": "amazon",
+    "publishedAt": "2026-10-17",
+    "enabled": true
+  },
+  {
+    "id": "006",
+    "name": "Echo Spot（2024年発売・ブラック）",
+    "description": "アラームも天気の確認も、声をかけるだけ。 動画の確認画像では39％OFF・6,980円（税込）。2026/10/16〜17時点の表示で、現在の価格・在庫・適用条件はAmazonでご確認ください。",
+    "url": "https://www.amazon.co.jp/dp/B0C2S4K41G/ref=nosim?tag=tamama0a-22",
+    "provider": "amazon",
+    "publishedAt": "2026-10-17",
+    "enabled": true
+  },
+  {
+    "id": "007",
+    "name": "Anker Power Bank（25,000mAh・ブラック）",
+    "description": "巻き取りケーブル内蔵で、荷物をすっきり。 動画の確認画像では40％OFF・10,790円（税込）。2026/10/16〜17時点の表示で、現在の価格・在庫・適用条件はAmazonでご確認ください。",
+    "url": "https://www.amazon.co.jp/dp/B0DT4RGDSJ/ref=nosim?tag=tamama0a-22",
+    "provider": "amazon",
+    "publishedAt": "2026-10-17",
+    "enabled": true
+  },
+  {
+    "id": "008",
+    "name": "CASIO STW-1000シリーズ（ブラック／ブルー）",
+    "description": "光で充電できて、電波で時刻を補正。 動画の確認画像では60％OFF・5,907円（税込）。2026/10/16〜17時点の表示で、現在の価格・在庫・適用条件はAmazonでご確認ください。",
+    "url": "https://www.amazon.co.jp/dp/B09BYT1JXP/ref=nosim?tag=tamama0a-22",
+    "provider": "amazon",
+    "publishedAt": "2026-10-17",
+    "enabled": true
+  },
+  {
     "id": "003",
     "name": "ソニック カドノオモクリップ（SP-1667）",
     "description": "本の角に挟む重り付きクリップ。開いたページを押さえるのを助けます。",
